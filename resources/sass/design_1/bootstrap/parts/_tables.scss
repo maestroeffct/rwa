@@ -1,0 +1,75 @@
+//
+// Basic table
+//
+
+.table {
+    width: 100%;
+    margin-bottom: $spacer;
+    color: $body-color;
+    //background-color: $table-bg;
+
+    th,
+    td {
+        padding: $table-cell-padding;
+        vertical-align: center;
+        font-size: $font-size-base;
+    }
+
+    td {
+        border-top: 1px solid $table-border-color;
+    }
+
+    thead th {
+        vertical-align: bottom;
+        border-bottom: 1px solid $table-border-color;
+    }
+
+    tbody + tbody {
+        border-top: (2 * $table-border-width) solid $table-border-color;
+    }
+}
+
+.table-sm {
+    th,
+    td {
+        padding: $table-cell-padding-sm;
+    }
+}
+
+
+.panel-table {
+    thead {
+        background-color: var(--gray-100);
+
+        th {
+            font-size: 12px !important;
+            color: var(--gray-500) !important;
+        }
+    }
+
+    th,
+    td {
+        padding: 16px;
+    }
+}
+
+.table-responsive {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &#{$infix} {
+            @include media-breakpoint-down($breakpoint) {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+
+                // Prevent double border on horizontal scroll due to use of `display: block;`
+                > .table-bordered {
+                    border: 0;
+                }
+            }
+        }
+    }
+}

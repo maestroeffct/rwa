@@ -1,0 +1,48 @@
+.installment-overview {
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.2;
+        background: var(--primary);
+        z-index: 1;
+    }
+
+
+    &__cup-icon-mask {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        background-color: var(--primary);
+        opacity: 0.2;
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+.installment-video-card {
+    width: 100%;
+    position: relative;
+
+    .plyr.plyr--video {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+}
+
+.installment-verify {
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 32px;
+        opacity: 0.5;
+        z-index: 1;
+    }
+}

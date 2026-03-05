@@ -1,0 +1,30 @@
+.theme-footer-2 {
+  width: 100%;
+}
+.theme-footer-2__bg-wrapper {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.theme-footer-2__logo {
+  height: 44px;
+}
+.theme-footer-2__logo img {
+  height: 100%;
+}
+.theme-footer-2__back-to-top {
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+.rtl .theme-footer-2__back-to-top {
+  right: auto;
+  left: 0;
+}
+@media (max-width: 991px) {
+  .theme-footer-2__section {
+    height: auto !important;
+  }
+}

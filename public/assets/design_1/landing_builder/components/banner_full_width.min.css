@@ -1,0 +1,11 @@
+.banner-full-width-section {
+  width: 100%;
+}
+.banner-full-width-section__container-img {
+  width: 100%;
+  height: 480px;
+}
+.banner-full-width-section__full-width-img {
+  width: 100%;
+  height: 600px;
+}

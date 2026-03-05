@@ -1,0 +1,45 @@
+.landing-component-disabled {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 3;
+}
+
+.edit-component-sidebar {
+
+    &__component-card {
+        border: 1px solid transparent;
+
+        h6 {
+            color: var(--black);
+        }
+
+        p {
+            color: var(--gray-500);
+        }
+
+        .icons-box {
+            position: absolute;
+            right: 16px;
+            top: 33%;
+            display: none;
+
+            .rtl & {
+                right: auto;
+                left: 16px;
+            }
+        }
+
+        &.active, &:hover {
+            border: 1px solid var(--primary);
+
+            h6, p {
+                color: var(--primary);
+            }
+
+            .icons-box {
+                display: block;
+            }
+        }
+    }
+}

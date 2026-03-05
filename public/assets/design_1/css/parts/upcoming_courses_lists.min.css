@@ -1,0 +1,72 @@
+.upcoming-courses-lists-hero {
+  width: 100%;
+  height: 320px;
+}
+.upcoming-courses-lists-hero img {
+  position: absolute;
+  inset: 0;
+}
+.upcoming-courses-lists-hero__mask {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(1deg, rgba(18, 31, 62, 0.9) 0%, rgba(18, 31, 62, 0) 100%);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.dark-mode .upcoming-courses-lists-hero__mask {
+  background: linear-gradient(1deg, rgba(170, 184, 197, 0.9) 0%, rgba(170, 184, 197, 0) 100%);
+}
+
+.upcoming-courses-lists-header {
+  top: -119px;
+  margin-bottom: -119px;
+  z-index: 5;
+}
+.upcoming-courses-lists-header__mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 32px;
+  opacity: 0.5;
+  background: var(--white);
+  z-index: 1;
+}
+.upcoming-courses-lists-header__overlay-img {
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  top: auto;
+}
+@media (max-width: 991px) {
+  .upcoming-courses-lists-header__overlay-img {
+    width: 140px;
+    height: 140px;
+    bottom: auto;
+    top: 0;
+  }
+}
+.rtl .upcoming-courses-lists-header__overlay-img {
+  right: auto;
+  left: 16px;
+}
+
+.upcoming-courses-lists-filters__mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 16px;
+  opacity: 0.5;
+  background: var(--white);
+  z-index: 1;
+}
+.upcoming-courses-lists-filters .upcoming-courses-lists-sort-input {
+  width: 220px;
+}
+@media (max-width: 991px) {
+  .upcoming-courses-lists-filters .upcoming-courses-lists-sort-input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../bootstrap/variables";
+
+
+@keyframes leftRightSmoothCourseBundles {
+    0%, 100% {
+        transform: translateX(-8px);
+    }
+    50% {
+        transform: translateX(24px);
+    }
+}
+
+.course-bundles-section {
+    width: 100%;
+    height: 840px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 160px 0 174px;
+
+    &__statistics-title {
+        .line {
+            width: 2px;
+            height: 20px;
+            background-color: var(--primary);
+        }
+    }
+
+    &__floating-icon-1 {
+        position: absolute;
+        top: -72px;
+        left: -88px;
+        width: 72px;
+        height: 88px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .rtl & {
+            left: auto;
+            right: 0;
+            transform: translate(100%, -100%);
+        }
+    }
+
+    &__floating-icon-2 {
+        position: absolute;
+        bottom: -104px;
+        left: 10%;
+        width: 208px;
+        height: 208px;
+        animation: leftRightSmoothCourseBundles 2s ease-in-out infinite;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .rtl & {
+            left: auto;
+            right: 10%;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+        padding: 48px 0;
+
+        &__floating-icon-1 {
+            top: -72px;
+            left: 24px;
+
+            .rtl & {
+                left: auto;
+                right: 24px;
+            }
+        }
+
+        &__floating-icon-2 {
+            bottom: 0;
+            left: auto;
+            right: 16px;
+            width: 104px;
+            height: 104px;
+
+            .rtl & {
+                left: 16px;
+                right: auto;
+            }
+        }
+    }
+
+}
+

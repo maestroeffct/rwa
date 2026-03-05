@@ -1,0 +1,38 @@
+/*
+@media (max-width: $screen-sm-max) {
+    width: 100px;
+    height: 100px;
+}*/
+.meeting-package-grid-card-1__mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 24px;
+  opacity: 0.5;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.profile-container .meeting-package-grid-card-1__mask {
+  border: 1px solid var(--gray-200);
+}
+.card-with-border .meeting-package-grid-card-1__contents {
+  border: 1px solid var(--gray-200);
+}
+.card-with-border .meeting-package-grid-card-1__mask {
+  display: none;
+}
+.meeting-package-grid-card-1:hover .meeting-package-grid-card-1__mask {
+  top: -8px;
+  bottom: 8px;
+}
+.meeting-package-grid-card-1__discount-badge {
+  position: absolute;
+  top: 28px;
+  right: 16px;
+  z-index: 3;
+}
+.rtl .meeting-package-grid-card-1__discount-badge {
+  right: auto;
+  left: 16px;
+}

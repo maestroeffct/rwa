@@ -1,0 +1,308 @@
+@import "../bootstrap/variables";
+
+
+.instructor-finder-wizard {
+
+    &__mask {
+        position: absolute;
+        top: -32px;
+        bottom: -32px;
+        right: -32px;
+        left: calc(50% - 52px);
+        border-radius: 48px;
+        z-index: -1;
+
+        .rtl & {
+            left: -32px;
+            right: calc(50% - 52px);
+        }
+    }
+
+    &__images-card {
+        position: relative;
+        height: 630px;
+        width: 100%;
+
+        .wizard-overlay-image {
+            position: absolute;
+            bottom: 48px;
+            right: -100px;
+            width: 200px;
+            height: 200px;
+            z-index: 2;
+
+            .rtl & {
+                right: auto;
+                left: -100px;
+            }
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: 480px;
+
+            .wizard-overlay-image {
+                right: -24px;
+                width: 100px;
+                height: 100px;
+
+                .rtl & {
+                    right: auto;
+                    left: -24px;
+                }
+            }
+        }
+    }
+
+    &__progress {
+
+        &, & .progressbar {
+            height: 4px;
+        }
+    }
+
+    &__week-day {
+        label {
+            border: 1px solid var(--gray-400) !important;
+        }
+    }
+}
+
+.instructor-finder {
+
+    &__top-hero-mask {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        left: 8px;
+        bottom: -8px;
+        background-color: var(--white);
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    &__map-container {
+        height: 800px;
+        width: calc(100% + 64px);
+        right: -32px;
+        left: -32px;
+        margin-top: -80px;
+        z-index: 2;
+        border-radius: 32px;
+
+        @media (max-width: $screen-sm-max) {
+            height: 480px;
+            width: calc(100% + 48px);
+            right: -24px;
+            left: -24px;
+            border-radius: 0;
+        }
+
+        .marker-pin {
+            width: 48px;
+            height: 48px;
+            padding: 4px;
+            background-color: #FFFFFF;
+        }
+
+        .map-instructor-card-popup {
+            bottom: 50px !important;
+
+            .leaflet-popup-content {
+                margin: 0 !important;
+                width: 190px !important;
+            }
+
+            .leaflet-popup-tip-container {
+                display: none !important;
+            }
+        }
+
+        .leaflet-popup {
+            z-index: 20;
+        }
+    }
+
+
+    &__top-filters {
+        margin-top: -40px;
+        z-index: 10;
+    }
+
+    &__top-mentors-mask {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        background-color: var(--primary);
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    &__filters-title {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: -16px;
+            top: 50%;
+            width: 4px;
+            height: 12px;
+            background-color: var(--primary);
+            transform: translateY(-50%);
+        }
+
+        &.filters-title-white:before {
+            background-color: var(--white);
+        }
+    }
+
+    &__top-mentors-avatar {
+        position: relative;
+
+        img {
+            z-index: 3;
+        }
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        &:before {
+            width: 96px;
+            height: 96px;
+            background-color: var(--primary);
+            z-index: 2;
+        }
+
+        &:after {
+            width: 104px;
+            height: 104px;
+            background-color: rgb(217, 217, 217);
+            opacity: .5;
+            z-index: 1;
+        }
+    }
+
+    &__top-mentors-divider {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1px;
+        height: 32px;
+        opacity: 0.3;
+        background: var(--white);
+    }
+
+    &__top-mentors-slider-navigation {
+        position: absolute;
+        top: 30% !important;
+        width: 40px !important;
+        height: 40px !important;
+
+        &.swiper-button-next {
+            right: 38px !important;
+        }
+
+        &.swiper-button-prev {
+            left: 38px !important;
+        }
+
+        &:after {
+            display: none !important;
+        }
+    }
+
+    &__filters-card {
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: -8px;
+            border-radius: 16px;
+            background-color: var(--white);
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+
+        .wrunner__valueNote {
+            display: none !important;
+        }
+
+    }
+
+    &__user-card {
+        height: 327px;
+
+        .actions-box {
+            width: 192px;
+            min-width: 192px;
+            height: 100%;
+
+            .discount-box {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+
+                .rtl & {
+                    right: auto;
+                    left: 8px;
+                }
+            }
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: auto;
+
+            .actions-box {
+                width: 100%;
+                min-width: 100%;
+            }
+        }
+
+        &-verified-badge {
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+            z-index: 3;
+
+            .rtl & {
+                right: auto;
+                left: 2px;
+            }
+        }
+    }
+}
+
+.instructor-finder-map-popup {
+
+    &__user-avatar {
+        border-radius: 40px;
+        border: 8px solid var(--gray-100);
+    }
+
+    &__mask {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        background-color: var(--white);
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+}

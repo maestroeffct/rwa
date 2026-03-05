@@ -1,0 +1,88 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.sliding-testimonials-2-rows-section .testimonials-scroll-wrapper {
+  direction: ltr !important;
+}
+.sliding-testimonials-2-rows-section .testimonials-scroll-wrapper .testimonials-scroll-animation {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 24px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.sliding-testimonials-2-rows-section .testimonials-scroll-wrapper .testimonials-scroll-animation.scroll-right-left {
+  animation: scroll 80s linear infinite;
+  animation-fill-mode: forwards;
+}
+.sliding-testimonials-2-rows-section .testimonials-scroll-wrapper .testimonials-scroll-animation.scroll-left-right {
+  animation: scrollLeft 80s linear infinite;
+}
+.sliding-testimonials-2-rows-section .testimonials-swiper-ltr {
+  padding-left: 88px;
+  padding-right: 24px;
+}
+.sliding-testimonials-2-rows-section .sliding-testimonial-card {
+  flex: 0 0 auto;
+  width: 440px;
+  min-width: 440px;
+  height: 264px;
+  white-space: normal;
+}
+.sliding-testimonials-2-rows-section .sliding-testimonial-card-mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 24px;
+  opacity: 0.5;
+  background-color: var(--white);
+  z-index: 1;
+}
+.sliding-testimonials-2-rows-section .sliding-testimonial-card__comment {
+  height: 172px;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .sliding-testimonials-2-rows-section .sliding-testimonial-card {
+    width: 340px;
+    min-width: 340px;
+    height: 264px;
+  }
+}
+.sliding-testimonials-2-rows-section__cta-floating-img {
+  width: 160px;
+  height: 160px;
+  margin-right: 140px;
+  margin-left: 88px;
+}
+.sliding-testimonials-2-rows-section__cta-floating-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.rtl .sliding-testimonials-2-rows-section__cta-floating-img {
+  margin-right: 88px;
+  margin-left: 140px;
+}
+@media (max-width: 991px) {
+  .sliding-testimonials-2-rows-section__cta-floating-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 48px;
+    margin-left: 8px;
+  }
+}

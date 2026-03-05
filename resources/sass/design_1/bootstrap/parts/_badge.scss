@@ -1,0 +1,61 @@
+.badge-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 4px;
+    background-color: var(--badge-counter);
+    font-size: 12px;
+    border-radius: 50rem;
+    color: var(--white);
+}
+
+.badge-discount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 10px;
+    background-color: var(--badge-counter);
+    font-size: 12px;
+    border-radius: 30px;
+    color: var(--white);
+    line-height: 14px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 30px;
+    line-height: 14px;
+}
+
+$badge-colors: ();
+$badge-colors: map-merge(
+        (
+            "primary" : 'primary',
+            "secondary" : 'secondary',
+            "danger" : 'danger',
+            "success" : 'success',
+            "info" : 'info',
+            "warning" : 'warning',
+        ),
+        $badge-colors
+);
+
+@each $bg, $color in $badge-colors {
+    .badge-soft-#{$bg} {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.2;
+            z-index: 1;
+            background-color: var(--#{$bg}) !important;
+            border-radius: inherit; // use parent
+        }
+    }
+}

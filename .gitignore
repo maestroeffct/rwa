@@ -1,0 +1,21 @@
+/node_modules
+/public/hot
+/public/storage
+# /public/store/*
+/public/debug_paytabs.log
+!/public/store/.htaccess
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+
+/storage/framework/laravel-excel
+
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+composer.lock
+storage/debugbar/.gitignore

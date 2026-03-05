@@ -1,0 +1,198 @@
+.profile-reserve-meeting .datepicker-plot-area {
+  font-family: var(--font-family-base) !important;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 16px;
+  border: 1px solid var(--gray-200);
+  background-color: var(--white);
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: var(--white);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid var(--gray);
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn.pwt-btn-prev, .profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn.pwt-btn-next {
+  position: relative;
+  color: var(--primary);
+  border-radius: 8px;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn.pwt-btn-prev *, .profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn.pwt-btn-next * {
+  position: relative;
+  z-index: 2;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn.pwt-btn-prev:before, .profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn.pwt-btn-next:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  z-index: 1;
+  background-color: var(--info) !important;
+  border-radius: inherit;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-navigator .pwt-btn.pwt-btn-switch {
+  width: auto !important;
+  color: var(--black);
+  margin: 0 32px !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view {
+  background-color: transparent !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .month-grid-box {
+  margin: 0 !important;
+  background-color: transparent !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .month-grid-box .header {
+  padding: 16px 0 !important;
+  background-color: var(--white) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .month-grid-box .header .header-row-cell {
+  color: var(--gray-500) !important;
+  font-size: 12px !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .table-days {
+  margin-top: 12px;
+  border-radius: 12px;
+  padding: 0 12px 12px 12px;
+  background-color: var(--white) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .table-days tr {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .table-days tr td {
+  width: auto !important;
+  height: auto !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .table-days tr td span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 8px !important;
+  color: var(--black) !important;
+  background-color: var(--white) !important;
+  border: none !important;
+  text-shadow: none !important;
+  line-height: 21px !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .table-days tr td:hover > span {
+  color: var(--black) !important;
+  background-color: var(--gray-100) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .table-days tr td.disabled > span {
+  color: var(--gray-400) !important;
+  background-color: var(--gray-200) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-day-view .table-days tr td.selected > span {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-month-view, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 0 !important;
+  padding: 8px;
+  background-color: var(--white) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .month-item, .profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .year-item, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .month-item, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .year-item {
+  width: auto !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--black) !important;
+  background-color: var(--white) !important;
+  border: 1px solid var(--gray-200) !important;
+  border-radius: 8px;
+  text-shadow: none !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .month-item.selected, .profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .year-item.selected, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .month-item.selected, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .year-item.selected {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .month-item:hover:not(.selected), .profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .year-item:hover:not(.selected), .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .month-item:hover:not(.selected), .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .year-item:hover:not(.selected) {
+  color: var(--black) !important;
+  background-color: var(--gray-100) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .month-item.month-item-disable, .profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .month-item.year-item-disable, .profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .year-item.month-item-disable, .profile-reserve-meeting .datepicker-plot-area .datepicker-month-view .year-item.year-item-disable, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .month-item.month-item-disable, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .month-item.year-item-disable, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .year-item.month-item-disable, .profile-reserve-meeting .datepicker-plot-area .datepicker-year-view .year-item.year-item-disable {
+  color: var(--gray-400) !important;
+  background-color: var(--gray-100) !important;
+}
+.profile-reserve-meeting .datepicker-plot-area .toolbox {
+  display: none;
+  margin-top: 0;
+  background-color: #ffffff;
+}
+
+.profile-available-times-item label {
+  cursor: pointer;
+  color: var(--gray-500);
+  border: 1px solid var(--gray-200);
+  transition: all 0.2s;
+}
+.profile-available-times-item label.unavailable {
+  cursor: default;
+  color: var(--gray-400);
+  border-style: dashed;
+}
+.profile-available-times-item label .time-center-divider {
+  color: var(--gray-500);
+  border: 1px solid var(--gray-200);
+}
+.profile-available-times-item label .time-center-divider:after, .profile-available-times-item label .time-center-divider:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 1px;
+  border-top: 1px dashed var(--gray-300);
+  z-index: 1;
+}
+.profile-available-times-item label .time-center-divider:after {
+  left: -16px;
+}
+.profile-available-times-item label .time-center-divider:before {
+  right: -16px;
+}
+.profile-available-times-item input {
+  visibility: hidden;
+  display: none;
+  transition: all 0.3s;
+}
+.profile-available-times-item input:checked + label {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--white);
+}
+.profile-available-times-item input:checked + label .time-center-divider {
+  color: var(--white);
+  border-color: var(--info);
+}
+.profile-available-times-item input:checked + label .time-center-divider:after, .profile-available-times-item input:checked + label .time-center-divider:before {
+  border-top-color: var(--white);
+  opacity: 0.5;
+}

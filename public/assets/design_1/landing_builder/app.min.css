@@ -1,0 +1,116 @@
+.landing-builder-header {
+  height: 70px;
+}
+.landing-builder-header__logo {
+  width: 258px;
+}
+.landing-builder-header__badge-counter {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 16px;
+  min-height: 16px;
+}
+@media (max-width: 991px) {
+  .landing-builder-header__logo {
+    width: 98px;
+  }
+}
+
+.landing-builder-sidebar {
+  width: 258px;
+  height: calc(100vh - 70px);
+}
+.landing-builder-sidebar__stat-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--gray-200);
+}
+@media (max-width: 991px) {
+  .landing-builder-sidebar {
+    position: fixed;
+    top: 110%;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 570;
+    padding: 40px 20px 0 !important;
+    transition: top 0.4s cubic-bezier(0.43, 0.83, 0.54, 1.02), opacity 0.4s linear;
+  }
+  .landing-builder-sidebar.show-sidebar {
+    top: 70px;
+  }
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--gray);
+}
+
+.landing-builder-content {
+  width: calc(100vw - 258px);
+}
+.landing-builder-content__scrollable {
+  height: calc(100vh - 122px);
+}
+@media (max-width: 991px) {
+  .landing-builder-content {
+    width: 100%;
+  }
+}
+
+.landing-builder-title-and-breadcrumb {
+  height: 52px;
+}
+
+.landing-builder-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 258px);
+  z-index: 5;
+}
+@media (max-width: 991px) {
+  .landing-builder-bottom-bar {
+    width: 100%;
+  }
+}
+
+.landing-component-disabled {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 3;
+}
+
+.edit-component-sidebar__component-card {
+  border: 1px solid transparent;
+}
+.edit-component-sidebar__component-card h6 {
+  color: var(--black);
+}
+.edit-component-sidebar__component-card p {
+  color: var(--gray-500);
+}
+.edit-component-sidebar__component-card .icons-box {
+  position: absolute;
+  right: 16px;
+  top: 33%;
+  display: none;
+}
+.rtl .edit-component-sidebar__component-card .icons-box {
+  right: auto;
+  left: 16px;
+}
+.edit-component-sidebar__component-card.active, .edit-component-sidebar__component-card:hover {
+  border: 1px solid var(--primary);
+}
+.edit-component-sidebar__component-card.active h6, .edit-component-sidebar__component-card.active p, .edit-component-sidebar__component-card:hover h6, .edit-component-sidebar__component-card:hover p {
+  color: var(--primary);
+}
+.edit-component-sidebar__component-card.active .icons-box, .edit-component-sidebar__component-card:hover .icons-box {
+  display: block;
+}

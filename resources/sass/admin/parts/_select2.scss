@@ -1,0 +1,104 @@
+
+.select2-container {
+
+    .select2-selection {
+        @extend .form-control;
+        display: flex !important;
+        align-items: center;
+        border-radius: $input-border-radius !important;
+        height: auto !important;
+        min-height: $input-height !important;
+        padding: 6px 16px !important;
+
+        .select2-selection__arrow {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .select2-selection__rendered {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .select2-selection__choice {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary) !important;
+            border-color: var(--primary) !important;
+            color: var(--white) !important;
+            margin-top: 2px !important;
+            margin-left: 0 !important;
+            margin-right: 5px !important;
+
+            .rtl & {
+                margin-right: 0 !important;
+                margin-left: 5px !important;
+            }
+
+            .select2-selection__choice__remove {
+                color: var(--white) !important;
+                border-color: var(--primary) !important;
+                top: auto !important;
+
+                &:hover {
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+
+        .select2-selection__clear {
+            position: absolute;
+            right: 28px;
+            color: var(--danger);
+            font-size: 22px;
+            float: none !important;
+            font-weight: normal !important;
+            height: auto !important;
+            margin-right: 0 !important;
+            padding-right: 0;
+        }
+
+    }
+}
+
+.select2-bg-white {
+    .select2-container .select2-selection {
+        background-color: var(--white) !important;
+    }
+}
+
+.select2-dropdown {
+    background: var(--white);
+    border: 1px solid var(--gray-300) !important;
+    border-radius: 12px !important;
+    z-index: 1094;
+    padding-bottom: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    &.select2-dropdown--below {
+        top: 8px;
+    }
+
+    &.select2-dropdown--above {
+        top: -8px;
+    }
+
+    .select2-search {
+        padding: 16px !important;
+
+        .select2-search__field {
+            border: 1px solid var(--gray-300) !important;
+            border-radius: 8px !important;
+            height: 36px !important;
+        }
+    }
+
+    .select2-results {
+        li {
+            padding: 8px 16px !important;
+        }
+    }
+
+}

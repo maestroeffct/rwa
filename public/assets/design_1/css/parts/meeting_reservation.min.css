@@ -1,0 +1,49 @@
+.meeting-book__mask {
+  position: absolute;
+  top: -32px;
+  right: -32px;
+  bottom: -32px;
+  left: 50%;
+  border-radius: 48px;
+  background: var(--gray-200);
+  z-index: 1;
+}
+.meeting-book__teacher-avatar {
+  border: 8px solid var(--gray-200);
+}
+.meeting-book__input-button label {
+  border-radius: 8px;
+  color: var(--gray-500);
+  background-color: var(--white);
+  height: 40px;
+}
+.meeting-book__input-button input {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.meeting-book__input-button input:checked ~ label {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.meeting-book__participants-range .wrunner__path_theme_default.wrunner__path {
+  border-radius: 5px !important;
+  background: var(--gray-200) !important;
+  height: 5px !important;
+}
+.meeting-book__participants-range .wrunner__path_theme_default.wrunner__path .wrunner__handle_theme_default.wrunner__handle {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  border: solid 4px var(--primary) !important;
+}
+
+.meeting-book-right-float-image {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  bottom: 20%;
+  right: -64px;
+  z-index: 3;
+  transform: translateX(100%);
+}

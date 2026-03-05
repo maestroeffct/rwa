@@ -1,0 +1,62 @@
+@import "../bootstrap/variables";
+
+.noticeboards-drawer {
+    position: fixed;
+    height: 100vh;
+    width: 680px;
+    top: 0;
+    bottom: 0;
+    right: -110%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.43, 0.83, 0.54, 1.02), opacity .4s linear;
+    z-index: 1506;
+
+    &__body {
+        height: calc(100vh - 64px);
+        overflow-y: auto;
+    }
+
+    &-mask {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1058;
+    }
+
+    &.show {
+        right: 0;
+    }
+
+    &.show ~ &-mask {
+        display: block;
+    }
+
+    .rtl & {
+        right: auto;
+        left: -110%;
+
+        &.show {
+            right: auto;
+            left: 0;
+        }
+    }
+
+    .alert {
+        .icons.text-white {
+            &, & * {
+                color: var(--white) !important;
+            }
+        }
+
+        .icons.text-gray-500 {
+            &, & * {
+                color: var(--gray-500) !important;
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        width: 100%;
+    }
+}

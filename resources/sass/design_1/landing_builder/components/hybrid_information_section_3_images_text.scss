@@ -1,0 +1,85 @@
+@import "../../bootstrap/variables";
+
+.hybrid-information-section-3-images_text-section {
+    width: 100%;
+
+    &__image-1, &__image-2 {
+        position: relative;
+        width: 280px;
+        height: 576px;
+
+        @media (max-width: $screen-sm-max) {
+            width: 50%;
+            height: 320px;
+        }
+    }
+
+    &__image-1 {
+        top: -32px;
+        margin-bottom: -32px;
+    }
+
+    &__overlay-image {
+        position: absolute;
+        top: 30%;
+        left: -66px;
+        width: 132px;
+        height: 132px;
+        animation: rotate-animation 12s infinite linear;
+
+        &, & img {
+            border-radius: 50%;
+        }
+
+        img {
+            fill: rgba(255, 255, 255, 0.20);
+            backdrop-filter: blur(4px);
+        }
+
+        .rtl & {
+            left: auto;
+            right: -66px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            top: auto;
+            bottom: 0;
+            left: -24px;
+            width: 96px;
+            height: 96px;
+
+            .rtl & {
+                left: auto;
+                right: -24px;
+            }
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: 14px;
+        right: 8px;
+        transform: rotate(20deg);
+        padding: 8px 16px;
+        z-index: 2;
+
+        .rtl & {
+            right: auto;
+            left: 8px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            top: -16px;
+        }
+    }
+
+    &__statistic-item {
+
+        .line {
+            width: 2px;
+            height: 20px;
+            background-color: var(--primary);
+        }
+    }
+}
+

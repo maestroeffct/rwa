@@ -1,0 +1,84 @@
+@import "../../bootstrap/variables";
+
+.banners-grid-3-in-different-sizes-section {
+
+    .banner-bottom-contents {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 130px;
+        border-radius: 0 0 32px 32px;
+        transition: all 0.6s ease-in-out;
+
+        &:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 0 0 32px 32px;
+            transition: all 0.4s ease-in-out;
+            background: linear-gradient(0deg, #000 0.34%, rgba(0, 0, 0, 0.00) 99.89%);
+            opacity: 0.8;
+
+            .dark-mode & {
+                background: linear-gradient(0deg, #E1EAF6 0.34%, rgba(225, 234, 246, 0.00) 99.89%);
+            }
+
+        }
+    }
+
+    &__banner-1, &__banner-2, &__banner-3 {
+        overflow: hidden;
+
+        img {
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.04);
+            }
+        }
+    }
+
+    &__banner-1 {
+        width: 100%;
+        height: 672px;
+    }
+
+    &__banner-2 {
+        width: 100%;
+        height: 324px;
+    }
+
+    &__banner-3 {
+        width: 100%;
+        height: 324px;
+    }
+
+    &__cta-section {
+        width: 100%;
+        height: 324px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &-arrow-icon {
+            transition: all 0.3s ease;
+        }
+
+        &:hover &-arrow-icon {
+            transform: rotate(45deg);
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        &__banner-1 {
+            width: 100%;
+            height: 324px;
+        }
+
+    }
+
+}
+

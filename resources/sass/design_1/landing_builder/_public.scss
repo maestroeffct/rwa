@@ -1,0 +1,43 @@
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--gray);
+}
+
+.landing-builder-content {
+    width: calc(100vw - 258px);
+
+    &__scrollable {
+        height: calc(100vh - 122px);
+    }
+
+    @media (max-width: $screen-sm-max) {
+        width: 100%;
+    }
+}
+
+.landing-builder-title-and-breadcrumb {
+    height: 52px;
+}
+
+.landing-builder-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 258px);
+    z-index: 5;
+
+    @media (max-width: $screen-sm-max) {
+        width: 100%;
+    }
+}
+
+.landing-builder-component-preview {
+
+    &__image {
+
+    }
+}

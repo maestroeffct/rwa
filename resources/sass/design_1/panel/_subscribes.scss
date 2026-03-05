@@ -1,0 +1,23 @@
+.no-plan-icon {
+    width: 101px;
+    height: 101px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    .rtl & {
+        right: auto;
+        left: 0;
+    }
+}
+
+
+.subscribe-plan {
+    position: relative;
+
+    .badge-popular {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}

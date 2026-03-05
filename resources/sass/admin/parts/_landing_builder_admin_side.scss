@@ -1,0 +1,49 @@
+// For Admin/Landing_pages
+
+.landing-pages {
+
+    &__landing-item {
+
+        &-preview-image {
+            position: relative;
+            height: 320px;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                height: auto !important;
+                min-height: 100%;
+            }
+        }
+
+        &-status {
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            z-index: 2;
+        }
+
+        &-dropdown {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            z-index: 2;
+
+            .dropdown-toggle {
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                background: rgba(18, 31, 62, 0.40) !important;
+            }
+
+            .dropdown-menu {
+                top: 24px;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

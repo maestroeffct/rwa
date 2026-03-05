@@ -1,0 +1,20 @@
+.cta-card-8-columns-section {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.cta-card-8-columns-section__bg-mask {
+  position: absolute;
+  width: 100%;
+  height: 426px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cta-card-8-columns-section__contents-box-mask {
+  position: absolute;
+  inset: 12px;
+  bottom: -12px;
+  border-radius: 32px;
+  opacity: 0.5;
+  background-color: var(--white);
+}

@@ -1,0 +1,25 @@
+(function ($) {
+    "use strict"
+
+    $(document).ready(function () {
+
+
+        handleDoubleRange($('#studyTimeRange'), 'study_time', function (range, minTimeEl, maxTimeEl) {
+            range.onValueUpdate(function (values) {
+                minTimeEl.val(values.minValue);
+                maxTimeEl.val(values.maxValue);
+
+                $('.js-filters-min-study_time').val(values.minValue)
+                $('.js-filters-max-study_time').val(values.maxValue)
+
+                if (minTimeEl.hasClass('js-range-input-view-data') || maxTimeEl.hasClass('js-range-input-view-data')) {
+                    handleTriggerInputForAjax(minTimeEl)
+                }
+
+            });
+        });
+
+
+    });
+
+})(jQuery)

@@ -1,0 +1,55 @@
+@import "row_card_1"; // When the course list is grid by default and is listed with Ajax, the list mode style is not loaded. So we import it here too.
+
+.course-grid-card-1 {
+    position: relative;
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 24px;
+        opacity: 0.5;
+        background-color: var(--white);
+        transition: all 0.3s ease;
+        z-index: 1;
+
+        .profile-container & {
+            border: 1px solid var(--gray-200);
+        }
+    }
+
+    &:hover &__mask {
+        top: -8px;
+        bottom: 8px;
+    }
+
+    &__image {
+        height: 226px;
+
+        &, & img {
+            border-radius: 16px 16px 0 0;
+        }
+
+        img {
+            object-fit: contain;
+            background-color: var(--white);
+        }
+    }
+
+    &__body {
+        height: 192px;
+        border-radius: 0 0 16px 16px;
+        border-top: none;
+        background: var(--white);
+
+        .course-title {
+            max-height: 42px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .profile-container & {
+            border: 1px solid var(--gray-200);
+        }
+    }
+}

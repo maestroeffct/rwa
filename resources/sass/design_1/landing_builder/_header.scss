@@ -1,0 +1,21 @@
+.landing-builder-header {
+    height: 70px;
+
+    &__logo {
+        width: 258px;
+    }
+
+    &__badge-counter {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        min-width: 16px;
+        min-height: 16px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        &__logo {
+            width: 98px;
+        }
+    }
+}

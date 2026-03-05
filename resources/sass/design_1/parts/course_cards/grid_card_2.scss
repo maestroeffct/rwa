@@ -1,0 +1,24 @@
+@import "row_card_1"; // When the course list is grid by default and is listed with Ajax, the list mode style is not loaded. So we import it here too.
+
+.course-grid-card-2 {
+    position: relative;
+    width: 100%;
+    height: 422px;
+
+
+    &__body {
+        position: absolute;
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        min-height: 192px;
+        background-color: var(--white);
+
+        .course-title {
+            max-height: 42px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+    }
+}

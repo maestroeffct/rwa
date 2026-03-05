@@ -1,0 +1,73 @@
+@import "../../bootstrap/variables";
+
+.product-card {
+    margin-left: 12px;
+
+    .rtl & {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        margin-left: 8px;
+
+        .rtl & {
+            margin-left: 0;
+            margin-right: 8px;
+        }
+    }
+
+    &__mask {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.5;
+        background: var(--white);
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    .profile-container &, .profile-container &__mask {
+        border: 1px solid var(--gray-200);
+        border-radius: 16px;
+    }
+
+    &:hover &__mask {
+        top: -8px;
+        bottom: 8px;
+    }
+
+    &__image {
+        width: 124px;
+        height: 124px;
+        margin-left: -24px;
+
+        .rtl & {
+            margin-left: 0;
+            margin-right: -24px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    &__content {
+        width: calc(100% - 124px);
+        overflow: hidden;
+
+        @media (max-width: $screen-sm-max) {
+            width: calc(100% - 100px);
+        }
+    }
+
+    &__title {
+        max-height: 42px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,54 @@
+.become-instructor-wizard__mask {
+  position: absolute;
+  top: -32px;
+  bottom: -32px;
+  right: -32px;
+  left: calc(50% - 52px);
+  border-radius: 48px;
+  z-index: -1;
+}
+.rtl .become-instructor-wizard__mask {
+  left: -32px;
+  right: calc(50% - 52px);
+}
+.become-instructor-wizard__form-card {
+  height: 630px;
+  overflow-y: auto;
+}
+.become-instructor-wizard__images-card {
+  position: relative;
+  height: 630px;
+  width: 100%;
+}
+.become-instructor-wizard__images-card .wizard-overlay-image {
+  position: absolute;
+  bottom: 48px;
+  right: -100px;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+.rtl .become-instructor-wizard__images-card .wizard-overlay-image {
+  right: auto;
+  left: -100px;
+}
+@media (max-width: 991px) {
+  .become-instructor-wizard__images-card {
+    height: 480px;
+  }
+  .become-instructor-wizard__images-card .wizard-overlay-image {
+    right: -24px;
+    width: 100px;
+    height: 100px;
+  }
+  .rtl .become-instructor-wizard__images-card .wizard-overlay-image {
+    right: auto;
+    left: -24px;
+  }
+}
+.become-instructor-wizard__progress, .become-instructor-wizard__progress .progressbar {
+  height: 4px;
+}
+.become-instructor-wizard__week-day label {
+  border: 1px solid var(--gray-400) !important;
+}

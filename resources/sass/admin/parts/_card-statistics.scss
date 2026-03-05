@@ -1,0 +1,21 @@
+.card-statistic {
+    position: relative;
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.5;
+        background-color: var(--white);
+        z-index: 1;
+    }
+
+    &__wrap {
+        position: relative;
+        background-color: var(--white);
+        padding: 16px;
+        border-radius: 16px;
+        z-index: 2;
+    }
+}

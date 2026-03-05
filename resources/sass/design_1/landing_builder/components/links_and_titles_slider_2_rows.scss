@@ -1,0 +1,62 @@
+@import "../../bootstrap/variables";
+
+.links-and-titles-slider-2-rows-section {
+    position: relative;
+
+    .marquee-swiper {
+        transition-timing-function: linear;
+        align-items: center;
+        height: 93px;
+        width: 100%;
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            width: max-content;
+
+            .marquee-item {
+                font-size: 24px;
+                font-weight: bold;
+                color: var(--white);
+                text-decoration: none;
+            }
+
+            .tape-separator-icon {
+                width: 24px;
+                height: 24px;
+
+            }
+
+            @media (max-width: $screen-sm-max) {
+                gap: 20px;
+
+                .marquee-item {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &.primary-tape {
+            background-color: var(--primary);
+            direction: ltr;
+        }
+
+        &.secondary-tape {
+            background-color: var(--secondary);
+        }
+    }
+
+    &.taps-with-rotate {
+        .marquee-swiper {
+            &.primary-tape {
+                transform: rotate(-3deg);
+            }
+
+            &.secondary-tape {
+                transform: rotate(1deg);
+            }
+        }
+    }
+}
+

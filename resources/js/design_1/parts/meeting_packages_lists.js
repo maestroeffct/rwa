@@ -1,0 +1,39 @@
+(function ($) {
+    "use strict"
+
+    $(document).ready(function () {
+
+
+        handleDoubleRange($('#priceRange'), 'price', function (range, minTimeEl, maxTimeEl) {
+            range.onValueUpdate(function (values) {
+                minTimeEl.val(values.minValue);
+                maxTimeEl.val(values.maxValue);
+
+                $('.js-filters-min-price').val(jsCurrentCurrency + values.minValue)
+                $('.js-filters-max-price').val(jsCurrentCurrency + values.maxValue)
+
+                if (minTimeEl.hasClass('js-range-input-view-data') || maxTimeEl.hasClass('js-range-input-view-data')) {
+                    handleTriggerInputForAjax(minTimeEl)
+                }
+            });
+        });
+
+
+        handleDoubleRange($('#durationRange'), 'duration', function (range, minTimeEl, maxTimeEl) {
+            range.onValueUpdate(function (values) {
+                minTimeEl.val(values.minValue);
+                maxTimeEl.val(values.maxValue);
+
+                $('.js-filters-min-duration').val(values.minValue)
+                $('.js-filters-max-duration').val(values.maxValue)
+
+                if (minTimeEl.hasClass('js-range-input-view-data') || maxTimeEl.hasClass('js-range-input-view-data')) {
+                    handleTriggerInputForAjax(minTimeEl)
+                }
+            });
+        });
+
+
+    });
+
+})(jQuery)

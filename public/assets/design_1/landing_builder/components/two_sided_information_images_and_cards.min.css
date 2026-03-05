@@ -1,0 +1,26 @@
+.two-sided-information-images-and-cards-section {
+  width: 100%;
+  height: 795px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.two-sided-information-images-and-cards-section__specific-information-card {
+  height: 216px;
+}
+.two-sided-information-images-and-cards-section__side-img {
+  margin-top: 78px;
+  height: 717px;
+  max-width: 440px;
+}
+@media (max-width: 991px) {
+  .two-sided-information-images-and-cards-section {
+    height: auto;
+  }
+  .two-sided-information-images-and-cards-section__side-img {
+    height: 480px;
+    max-width: 100%;
+    margin-top: 0;
+    padding-bottom: 48px;
+  }
+}

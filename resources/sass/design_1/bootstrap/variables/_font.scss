@@ -1,0 +1,16 @@
+$font-family-base: 'main-font-family';
+$font-family-rtl: 'rtl-font-family';
+$font-family-arial: Arial;
+
+$font-size-base: 1rem; // 14px => set in _reset.scss html {font-size: 14px}
+$line-height-base: 1.8;
+
+$font-size-sm: $font-size-base * .875 !default;
+
+// font weight
+$font-weight-lighter: lighter !default;
+$font-weight-300: 300 !default;
+$font-weight-400: 400 !default;
+$font-weight-500: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;

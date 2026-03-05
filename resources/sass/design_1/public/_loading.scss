@@ -1,0 +1,55 @@
+@mixin loadingBarAnimate($animateName) {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAMElEQVQoU2P434CADGgALIZfGkkBdmm4AlzSUAW4pcEK8EljyqJJYygYqdLoCjBlAalbv4Hzd/xyAAAAAElFTkSuQmCC) !important;
+    background-repeat: repeat !important;
+    -moz-animation: $animateName .5s linear infinite;
+    -webkit-animation: $animateName .5s linear infinite;
+    -o-animation: $animateName .5s linear infinite;
+    animation: $animateName .5s linear infinite
+}
+
+
+.loadingbar {
+    @include loadingBarAnimate(sc-pending);
+
+    &.primary {
+        background-color: var(--primary) !important;
+
+        &:hover {
+            background-color: var(--primary) !important;
+        }
+    }
+
+    // orange loading bar
+    &.secondary {
+        background-color: var(--secondary) !important;
+        opacity: 0.75;
+
+        &:hover {
+            background-color: var(--secondary) !important;
+            opacity: 0.95;
+        }
+    }
+
+    // gray loading bar
+    &.gray {
+        background-color: $gray-300 !important;
+        opacity: 0.75;
+
+        &:hover {
+            background-color: $gray-300 !important;
+            opacity: 0.95;
+        }
+    }
+
+    // danger loading bar
+    &.danger {
+        background-color: $danger !important;
+        opacity: 0.75;
+        color: #FFFFFF;
+
+        &:hover {
+            background-color: $danger !important;
+            opacity: 0.95;
+        }
+    }
+}

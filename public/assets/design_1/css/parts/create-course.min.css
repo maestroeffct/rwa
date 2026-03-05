@@ -1,0 +1,56 @@
+.webinar-progress-mask {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: 8px;
+  bottom: -8px;
+  border-radius: 16px;
+  opacity: 0.5;
+  background: var(--white);
+  z-index: -1;
+}
+
+.create-webinar-course-types__icon-box {
+  background-color: var(--gray-100);
+}
+.create-webinar-course-types__icon-box svg, .create-webinar-course-types__icon-box svg * {
+  color: var(--gray-500) !important;
+}
+.create-webinar-course-types:hover .create-webinar-course-types__icon-box {
+  background-color: var(--primary);
+}
+.create-webinar-course-types:hover .create-webinar-course-types__icon-box svg, .create-webinar-course-types:hover .create-webinar-course-types__icon-box svg * {
+  color: var(--white) !important;
+}
+.create-webinar-course-types:hover input + label, .create-webinar-course-types:hover input + label *, .create-webinar-course-types input:checked + label, .create-webinar-course-types input:checked + label * {
+  color: var(--primary) !important;
+}
+.create-webinar-course-types:hover input + label .create-webinar-course-types__icon-box, .create-webinar-course-types input:checked + label .create-webinar-course-types__icon-box {
+  background-color: var(--primary);
+}
+.create-webinar-course-types:hover input + label .create-webinar-course-types__icon-box svg, .create-webinar-course-types:hover input + label .create-webinar-course-types__icon-box svg *, .create-webinar-course-types input:checked + label .create-webinar-course-types__icon-box svg, .create-webinar-course-types input:checked + label .create-webinar-course-types__icon-box svg * {
+  color: var(--white) !important;
+}
+
+.create-course-filter-card {
+  position: relative;
+}
+.create-course-filter-card:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 4px;
+  height: 12px;
+  background-color: var(--primary);
+}
+
+.create-course-bottom-progress {
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+}
+.create-course-bottom-progress__process {
+  height: 100%;
+  background-color: var(--primary);
+}

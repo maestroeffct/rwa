@@ -1,0 +1,76 @@
+@import "../../../bootstrap/variables";
+
+.theme-footer-1 {
+    width: 100%;
+
+    &__section {
+        height: 464px;
+        padding-top: 80px;
+
+        &-bg-wrapper {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+    }
+
+    &.has-newsletter {
+
+        .theme-footer-1__section {
+            padding-top: 140px;
+            height: 524px;
+        }
+    }
+
+    &__newsletter {
+        position: absolute;
+        top: -52px;
+        left: 0;
+        right: 0;
+
+        &-mask {
+            position: absolute;
+            inset: 16px;
+            bottom: -8px;
+            border-radius: 24px;
+            opacity: 0.1;
+            background-color: var(--white);
+        }
+
+        .newsletter-form {
+            width: 440px;
+
+            input {
+                display: flex;
+                background-color: transparent;
+                border: none;
+                height: 48px;
+            }
+
+            .invalid-feedback {
+
+            }
+
+            @media (max-width: var(--screen-xs-max)) {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__bottom-section-divider {
+        width: 100%;
+        height: 1px;
+        opacity: 0.1;
+        background-color: var(--white);
+        margin-top: 42px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        &__section {
+            height: auto !important;
+        }
+    }
+}

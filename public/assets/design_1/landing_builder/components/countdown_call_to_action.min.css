@@ -1,0 +1,43 @@
+.countdown-call-to-action-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  /*@media (max-width: $screen-sm-max) {
+
+  }*/
+}
+.countdown-call-to-action-section.container, .countdown-call-to-action-section.container .countdown-call-to-action-section__bg-wrapper {
+  border-radius: 32px;
+}
+.countdown-call-to-action-section__bg-wrapper {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+.countdown-call-to-action-section__main-image {
+  width: 100%;
+  height: 400px;
+}
+.countdown-call-to-action-section__overlay-image {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  right: -100px;
+}
+.countdown-call-to-action-section__overlay-image img {
+  width: 100%;
+  height: 100%;
+}
+.rtl .countdown-call-to-action-section__overlay-image {
+  right: auto;
+  left: -100px;
+}
+.countdown-call-to-action-section__statistic-divider {
+  width: 1px;
+  height: 32px;
+  opacity: 0.3;
+  background-color: var(--white);
+}

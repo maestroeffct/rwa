@@ -1,0 +1,19 @@
+.company-logos-section {
+  background-color: var(--section-bg);
+  border-radius: 48px;
+  padding: 48px;
+  margin-right: -48px;
+  margin-left: -48px;
+}
+.company-logos-section__logo-card {
+  height: 88px;
+}
+.company-logos-section__logo-card img {
+  max-height: 32px;
+}
+@media (max-width: 991px) {
+  .company-logos-section {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

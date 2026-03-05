@@ -1,0 +1,72 @@
+.user-avatar-remove-btn {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    border: 2px solid var(--gray);
+    z-index: 2;
+}
+
+.profile-secondary-image-card {
+    width: 100%;
+    height: 316px;
+}
+
+.user-setting-profile-video-box {
+    width: 330px;
+    height: 180px;
+}
+
+.user-setting-profile-cover {
+    height: 200px;
+}
+
+.user-setting-profile-cover-delete-btn {
+    height: 123px;
+    width: 123px;
+    min-width: 123px;
+}
+
+.user-setting-occupations {
+    input {
+        visibility: hidden;
+        display: none;
+
+        &:checked {
+            & + label {
+                background-color: var(--primary) !important;
+                color: var(--white);
+            }
+        }
+    }
+
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        background-color: var(--gray-200);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: var(--gray-500);
+        font-size: 14px;
+
+        &:hover {
+            background-color: var(--gray-300) !important;
+        }
+    }
+
+}
+
+@media (max-width: $screen-sm-max) {
+    .custom-tabs-items-scrollable-mobile {
+        width: 100%;
+        overflow-x: auto;
+
+        .navbar-item {
+            min-width: max-content;
+        }
+    }
+}
+

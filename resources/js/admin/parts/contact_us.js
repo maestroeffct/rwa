@@ -1,0 +1,56 @@
+(function ($) {
+    "use strict";
+
+    $(document).ready(function () {
+        var mapBox = $('#mapBox');
+        var mapContainer = $('#mapContainer');
+        var $LocationLatitude = $('#LocationLatitude');
+        var $LocationLongitude = $('#LocationLongitude');
+
+        var map;
+
+        function handleMap(lat, lng, zoom) {
+            mapContainer.removeClass('d-none');
+
+            const mapOption = {
+                dragging: true,
+                zoomControl: true,
+                scrollWheelZoom: true,
+            };
+
+            map = L.map('mapBox', mapOption).setView([lat, lng], zoom);
+
+            L.tileLayer(leafletApiPath, {
+                maxZoom: 18,
+                tileSize: 512,
+                zoomOffset: -1,
+                attribution: '© <a target="_blank" rel="nofollow" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            map.on('moveend', function (e) {
+                var centerLocation = map.getCenter();
+
+                $LocationLatitude.val(centerLocation.lat);
+                $LocationLongitude.val(centerLocation.lng);
+            });
+
+            map.on('dragstart', function () {
+                $('.region-map .marker').addClass('dragging');
+            });
+
+            map.on('dragend', function () {
+                $('.region-map .marker').removeClass('dragging')
+            });
+        }
+
+
+        const lat = $LocationLatitude.val();
+        const lng = $LocationLongitude.val();
+
+        const zoom = mapBox.attr('data-zoom');
+
+        handleMap(lat, lng, zoom);
+    });
+
+
+})(jQuery);

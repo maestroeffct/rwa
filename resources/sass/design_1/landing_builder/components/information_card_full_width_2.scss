@@ -1,0 +1,26 @@
+@import "../../bootstrap/variables";
+
+.information-card-full-width-2-section {
+
+
+
+    &__main-img {
+        width: 100%;
+        height: 672px;
+        overflow: hidden;
+
+        img {
+            transition: all 0.45s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: 480px;
+        }
+    }
+
+}
+

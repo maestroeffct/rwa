@@ -1,0 +1,25 @@
+.contact-page-additional-information-card {
+    position: relative;
+
+    .contact-page-adif__image {
+        position: absolute;
+        right: 16px;
+        top: -48px;
+        width: 94px;
+        height: 94px;
+
+        .rtl & {
+            right: auto;
+            left: 16px;
+        }
+    }
+}
+
+.contactus-map {
+    width: 100% !important;
+    height: 100% !important;
+
+    @media (max-width: var(--screen-xs-max)) {
+        height: 360px !important;
+    }
+}

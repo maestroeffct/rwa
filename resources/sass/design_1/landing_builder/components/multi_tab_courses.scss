@@ -1,0 +1,14 @@
+@import "../../bootstrap/variables";
+
+
+
+.multi-tab-courses-section {
+
+    .navbar-item {
+
+        &:before {
+            bottom: -6px;
+        }
+    }
+}
+

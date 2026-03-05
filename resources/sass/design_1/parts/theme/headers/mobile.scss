@@ -1,0 +1,205 @@
+@import "../../../bootstrap/variables";
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottomToTopDrawer {
+    0% {
+        bottom: 0;
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+        transform: translate(0, 0%);
+    }
+}
+
+@keyframes slideDrawerToBottom {
+    0% {
+        bottom: 0;
+        opacity: 1;
+        transform: translate(0, 0%);
+    }
+    100% {
+        bottom: 0;
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.theme-header-mobile {
+    position: relative;
+    z-index: 15;
+
+    &__search-form {
+        height: 48px;
+
+        input {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--gray-300) !important;
+            opacity: 0.5;
+
+            &::placeholder {
+                color: var(--gray-500);
+                opacity: .7;
+            }
+
+            &:focus, &:checked, &:active {
+                background-color: transparent !important;
+
+            }
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 16px;
+            bottom: 16px;
+            right: 16px;
+        }
+    }
+
+    &__cart-counter {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background-color: var(--danger);
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+    }
+
+    &__dot-separator {
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--gray-200);
+    }
+
+    &__logo {
+        height: 40px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__sticky {
+        &.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            animation: slideDown 0.5s ease forwards;
+        }
+    }
+
+    &__drawer {
+        position: fixed;
+        inset: 0;
+        opacity: 0;
+        display: none;
+        z-index: 10505;
+        transition: all 0.3s ease;
+
+        &.show {
+            display: block;
+            opacity: 1;
+
+            .theme-header-mobile__drawer-back-drop {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .theme-header-mobile__drawer-body {
+                transform: translateY(0);
+            }
+        }
+
+        &-back-drop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 10505;
+        }
+
+        &-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            border-radius: 24px 24px 0 0;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+            animation-name: slideBottomToTopDrawer;
+            z-index: 10506;
+
+            &.slide-down {
+                animation-duration: .3s;
+                animation-fill-mode: forwards;
+                animation-name: slideDrawerToBottom;
+            }
+        }
+    }
+
+    &__main-menu-drawer {
+        position: fixed;
+        top: 130%;
+        width: 100vw;
+        height: 100vh;
+        transition: top 0.4s cubic-bezier(0.43, 0.83, 0.54, 1.02), opacity 0.4s linear;
+        background-color: var(--white);
+        z-index: 1050;
+
+        &.show {
+            top: 0;
+        }
+
+        .tab-toggle-item {
+            color: var(--gray-500);
+            font-size: 12px;
+
+            &.active {
+                color: var(--dark);
+            }
+
+            &-separator {
+                margin: 0 16px;
+                width: 1px;
+                height: 23px;
+                background-color: var(--gray-200);
+            }
+        }
+
+        .custom-tabs-content {
+            padding: 24px;
+            overflow-y: auto;
+            height: calc(100vh - 242px);
+
+            &.without-bottom-specific-button {
+                height: calc(100vh - 170px);
+            }
+        }
+    }
+
+    &__user-verify-badge {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 14px;
+        min-width: 14px;
+        height: 14px;
+    }
+}

@@ -1,0 +1,68 @@
+@import "../../bootstrap/variables";
+
+.meeting-booking-list-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 0;
+
+    &__cta-image {
+        width: 140px;
+        min-width: 140px;
+        height: 140px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__table-container {
+        width: 100%;
+
+        @media (max-width: $screen-sm-max) {
+            overflow-x: auto;
+        }
+    }
+
+    &__meetings-table {
+        width: 100%;
+        padding: 0 24px 24px;
+        border-radius: 32px;
+        background: var(--white);
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.02);
+        margin-top: 72px;
+
+        thead {
+            position: relative;
+            top: -32px;
+
+            td {
+                font-size: 12px;
+                font-weight: 400;
+                color: var(--white);
+                opacity: 0.7;
+            }
+        }
+
+        tbody tr {
+            td {
+                padding-bottom: 24px;
+                padding-top: 24px;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            &:first-child td {
+                padding-top: 0;
+            }
+
+            &:last-child td {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
+
+
+}
+

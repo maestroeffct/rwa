@@ -1,0 +1,54 @@
+.instructor-discount-card {
+  height: 104px;
+}
+.instructor-discount-card__code {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  border-right: 1px dashed var(--gray-300);
+}
+.instructor-discount-card__code:before, .instructor-discount-card__code:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  right: -8px;
+}
+.instructor-discount-card__code:before {
+  top: -6px;
+}
+.instructor-discount-card__code:after {
+  bottom: -6px;
+}
+.rtl .instructor-discount-card__code {
+  border-right: none;
+  border-left: 1px dashed var(--gray-300);
+}
+.rtl .instructor-discount-card__code:before, .rtl .instructor-discount-card__code:after {
+  right: auto;
+  left: -6px;
+}
+@media (max-width: 991px) {
+  .instructor-discount-card__code {
+    width: 34%;
+  }
+}
+.instructor-discount-card__icon-svg svg {
+  width: 66px;
+  height: 66px;
+}
+@media (max-width: 991px) {
+  .instructor-discount-card__icon-svg svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+.instructor-discount-card.user-profile-discount-card {
+  border-radius: 16px;
+  background-color: var(--gray-100);
+}
+.instructor-discount-card.user-profile-discount-card .instructor-discount-card__code:before, .instructor-discount-card.user-profile-discount-card .instructor-discount-card__code:after {
+  background-color: var(--white);
+}

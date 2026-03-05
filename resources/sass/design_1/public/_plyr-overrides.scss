@@ -1,0 +1,21 @@
+.plyr--youtube {
+  /* Disable clicks on native YouTube iframe so only Plyr UI is interactive */
+  .plyr__video-embed > iframe {
+    pointer-events: none !important;
+  }
+
+  
+  .plyr__controls,
+  .plyr__control,
+  .plyr__progress,
+  .plyr__menu {
+    pointer-events: auto;
+  }
+
+  
+  .plyr__video-wrapper {
+    cursor: default;
+  }
+}
+
+

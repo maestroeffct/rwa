@@ -1,0 +1,42 @@
+.meeting-packages-grid-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.meeting-packages-grid-section__floating-image-1, .meeting-packages-grid-section__floating-image-2 {
+  position: absolute;
+  bottom: -88px;
+  width: 208px;
+  height: 208px;
+  aspect-ratio: 1/1;
+}
+.meeting-packages-grid-section__floating-image-1 img, .meeting-packages-grid-section__floating-image-2 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.meeting-packages-grid-section__floating-image-1 {
+  left: 0;
+}
+.rtl .meeting-packages-grid-section__floating-image-1 {
+  left: auto;
+  right: 0;
+}
+.meeting-packages-grid-section__floating-image-2 {
+  right: 0;
+}
+.rtl .meeting-packages-grid-section__floating-image-2 {
+  right: auto;
+  left: 0;
+}
+@media (max-width: 991px) {
+  .meeting-packages-grid-section {
+    height: auto;
+  }
+  .meeting-packages-grid-section__floating-image-1, .meeting-packages-grid-section__floating-image-2 {
+    bottom: -54px;
+    width: 104px;
+    height: 104px;
+  }
+}

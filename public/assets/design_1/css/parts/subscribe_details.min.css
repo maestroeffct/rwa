@@ -1,0 +1,9 @@
+.subscribe-plan-info__mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 16px;
+  opacity: 0.2;
+  background: var(--primary);
+  z-index: 1;
+}

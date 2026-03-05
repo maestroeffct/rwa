@@ -1,0 +1,16 @@
+@import "../bootstrap/variables";
+
+.meeting-basic-settings-image {
+    width: 285px;
+    height: 212px;
+}
+
+
+.time-sheet-items {
+
+    .inner-time {
+        @media (max-width: $screen-sm-max) {
+            font-size: 11px;
+        }
+    }
+}

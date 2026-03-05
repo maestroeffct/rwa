@@ -1,0 +1,28 @@
+
+.shadow-sm {
+    box-shadow: $box-shadow-sm !important;
+}
+
+.shadow {
+    box-shadow: $box-shadow !important;
+}
+
+.shadow-lg {
+    box-shadow: $box-shadow-lg !important;
+}
+
+.shadow-none {
+    box-shadow: none !important;
+}
+
+.soft-shadow-5 {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.soft-shadow-2 {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.hover-soft-shadow-5:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}

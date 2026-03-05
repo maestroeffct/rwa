@@ -1,0 +1,57 @@
+@import "../../bootstrap/variables";
+
+.boxed-cta-full-width-section {
+    padding: 64px 0;
+
+    &__bg-wrapper {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+    }
+
+    &__pre-title-icon {
+        display: inline-block;
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+    }
+
+    &__badge-box {
+        position: absolute;
+        top: 44px;
+        right: -32px;
+        transform: rotate(20deg);
+        z-index: 1;
+
+        .rtl & {
+            right: auto;
+            left: -32px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            top: -32px;
+            right: -16px;
+
+            .rtl & {
+                right: auto;
+                left: -16px;
+            }
+        }
+    }
+
+    &__circle-dot-separator {
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        opacity: 0.5;
+        background-color: var(--white);
+
+        &:last-child {
+            display: none;
+        }
+    }
+}
+

@@ -1,0 +1,25 @@
+.information-cards-section {
+  position: relative;
+}
+.information-cards-section__item-col:nth-child(n+4) {
+  margin-top: 24px;
+}
+.information-cards-section__item-card {
+  transition: all 0.3s ease;
+}
+.information-cards-section__item-card:hover {
+  transform: rotate(2deg);
+}
+.information-cards-section__image {
+  width: 100%;
+  height: 340px;
+}
+.information-cards-section__image, .information-cards-section__image img {
+  border-radius: 0 0 32px 32px;
+}
+.information-cards-section__image.enable-image-padding {
+  padding: 0 16px 16px;
+}
+.information-cards-section__image.enable-image-padding img {
+  border-radius: 0;
+}

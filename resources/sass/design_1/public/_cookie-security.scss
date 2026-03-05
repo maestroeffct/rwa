@@ -1,0 +1,54 @@
+@import "../bootstrap/variables";
+
+.js-cookie-security-dialog-box {
+    display: none;
+}
+
+.cookie-security-dialog {
+    position: fixed;
+    left: 50%;
+    bottom: 80px;
+    z-index: 1058;
+    width: 672px;
+    min-height: 80px;
+    transform: translateX(-50%);
+    padding: 16px 16px 16px 20px;
+
+    @media (max-width: $screen-sm-max) {
+        width: auto;
+        left: 24px;
+        bottom: 24px;
+        right: 24px;
+        transform: none;
+    }
+
+    .rtl & {
+        padding: 16px 20px 16px 16px;
+    }
+}
+
+.cookie-security-modal-description {
+    &, & * {
+        font-size: 14px;
+        color: var(--gray-500);
+    }
+}
+
+.cookie-settings-modal-items-card__description {
+    height: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: all .3s ease;
+
+    &.active {
+        margin-top: 15px;
+    }
+}
+
+.c-not-allowed {
+    .custom-control-label {
+        &:after, &:before {
+            cursor: not-allowed;
+        }
+    }
+}

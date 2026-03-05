@@ -1,0 +1,39 @@
+.course-statistic {
+
+    &__pie-chart-card {
+        height: 342px;
+
+        .pie-chart-no-data {
+            height: 273px;
+        }
+
+        .pie-chart-card {
+            height: 218px;
+        }
+    }
+
+    &__chart-card {
+        height: 35px;
+    }
+
+
+    .progress-card {
+        position: relative;
+        width: 100%;
+        height: 8px;
+        border-radius: 4px;
+        padding: 2px;
+
+        .progress-bar {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 0;
+            height: 4px;
+            border-radius: 4px;
+        }
+    }
+
+
+}

@@ -1,0 +1,111 @@
+$fontSizes: ();
+$fontSizes: map-merge(
+        (
+            8: 8,
+            10: 10,
+            12: 12,
+            13: 13,
+            14: 14,
+            15: 15,
+            16: 16,
+            18: 18,
+            20: 20,
+            21: 21,
+            22: 22,
+            24: 24,
+            30: 30,
+            32: 32,
+            36: 36,
+            40: 40,
+            44: 44,
+            48: 48,
+            64: 64,
+        ),
+        $fontSizes
+);
+
+@each $size, $length in $fontSizes {
+    @if $size != 0 {
+        .font-#{$size} {
+            font-size: #{$length}px !important;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    @each $size, $length in $fontSizes {
+        @if $size != 0 {
+            .font-#{$size} {
+                font-size: #{if($length < 16, $length / 1.2, if($length < 30, $length / 1.3, $length / 1.6))}px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    @each $size, $length in $fontSizes {
+        @if $size != 0 {
+            .font-#{$size} {
+                font-size: #{if($length < 16, $length / 1.2, if($length < 30, $length / 1.4, $length / 1.8))}px !important;
+            }
+        }
+    }
+}
+
+.font-family-arial {
+    font-family: $font-family-arial;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-weight: bold;
+    //line-height: 1.67;
+}
+
+
+h1, .h1 {
+    font-size: 24px;
+}
+
+h2, .h2 {
+    font-size: 21px;
+}
+
+h3, .h3 {
+    font-size: 18px;
+}
+
+h4, .h4 {
+    font-size: 15px;
+}
+
+h5, .h5 {
+    font-size: 14px;
+}
+
+h6, .h6 {
+    font-size: 12px;
+}
+
+@media (max-width: $screen-xs-max) {
+    h1, .h1 {
+        font-size: 21px;
+    }
+    h2, .h2 {
+        font-size: 18px;
+    }
+    h3, .h3 {
+        font-size: 15px;
+    }
+    h4, .h4 {
+        font-size: 14px;
+    }
+}
+
+.font-arial {
+    font-family: Arial;
+}

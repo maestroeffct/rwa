@@ -1,0 +1,108 @@
+@import "../../bootstrap/variables";
+
+
+@keyframes chwfiti-floating-image-1-animation {
+    0%, 100% {
+        transform: translate(8px, 2px);
+    }
+    50% {
+        transform: translate(40px, -28px);
+    }
+}
+
+@keyframes chwfiti-floating-image-2-animation {
+    0%, 100% {
+        transform: translate(8px, 16px);
+    }
+    50% {
+        transform: translate(-24px, -12px);
+    }
+}
+
+.centered-hero-with-four-images-two-icons-section {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 24px;
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+        padding: 24px 0;
+    }
+
+    &__upper-cta-badge-icon {
+        display: inline-block;
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+    }
+
+    .title-highlighted-word {
+        transform: rotate(-2deg);
+    }
+
+    .section-floating-icon-1 {
+        position: absolute;
+        width: 92px;
+        height: 92px;
+        bottom: 0;
+        left: -30%;
+        z-index: 2;
+        animation: chwfiti-floating-image-1-animation 4s ease-in-out infinite;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .rtl & {
+            left: auto;
+            right: -30%;
+        }
+    }
+
+    .section-floating-icon-2 {
+        position: absolute;
+        width: 92px;
+        height: 92px;
+        bottom: 10%;
+        right: -30%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        animation: chwfiti-floating-image-2-animation 4s ease-in-out infinite;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .rtl & {
+            right: auto;
+            left: -30%;
+        }
+    }
+
+
+    &__main-images,
+    {
+        position: relative;
+        width: 280px;
+        height: 480px;
+
+        &, & img {
+            border-radius: 140px;
+        }
+
+        &:nth-child(1), &:nth-child(4) {
+            top: -64px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            width: 44%;
+            height: 240px;
+            top: 0 !important;
+        }
+    }
+}
+

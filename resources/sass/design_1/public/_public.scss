@@ -1,0 +1,157 @@
+.light-only {
+
+    .dark-mode & {
+        display: none !important;
+    }
+}
+
+.dark-only {
+    display: none !important;
+
+    .dark-mode & {
+        display: block !important;
+    }
+}
+
+.direction-ltr {
+    direction: ltr !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
+.close-icon {
+    transform: rotate(-45deg);
+}
+
+.close-body-scroll {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.chevron-up-icon {
+    position: relative;
+    width: 24px !important;
+    height: 16px;
+    display: inline-flex;
+
+    &:after {
+        content: url("/assets/default/images/chevron-up.svg");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.chevron-down-icon {
+    position: relative;
+    width: 24px !important;
+    height: 16px;
+    display: inline-flex;
+
+    &:after {
+        content: url("/assets/default/images/chevron-down.svg");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media (max-width: $screen-sm-max) {
+    .sm-fluid {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .xs-fluid {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0
+    }
+}
+
+
+.custom-container-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 385px;
+    min-width: 385px;
+
+    .rtl & {
+        right: auto;
+        left: 0;
+    }
+}
+
+.custom-container-body {
+    width: calc(100% - 385px);
+}
+
+@media (max-width: $screen-sm-max) {
+    .custom-container-sidebar {
+        position: relative;
+        inset: 0;
+        width: 100%;
+        min-width: auto;
+        height: auto;
+    }
+
+    .custom-container-body {
+        width: 100%;
+    }
+}
+
+
+.section-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--gray-300);
+
+    &.section-title__white {
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
+
+        .section-title__heading {
+            color: var(--white);
+
+            &:after {
+                background-color: var(--white);
+            }
+        }
+    }
+
+    &__heading {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: var(--primary);
+        }
+    }
+}
+
+.js-get-view-data-by-tab.active {
+    color: var(--primary) !important;
+}
+
+.backdrop-filter-blur-4 {
+    backdrop-filter: blur(4px);
+}

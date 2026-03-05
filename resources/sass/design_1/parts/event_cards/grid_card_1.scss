@@ -1,0 +1,42 @@
+@import "../../bootstrap/variables";
+
+/*
+@media (max-width: $screen-sm-max) {
+    width: 100px;
+    height: 100px;
+}*/
+
+.event-grid-card-1 {
+    width: 100%;
+    height: 420px;
+
+    &__contents {
+        position: absolute;
+        min-height: 192px;
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        z-index: 3;
+
+        &-title {
+            max-height: 42px;
+            overflow: hidden;
+        }
+    }
+
+    &__badges {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        z-index: 2;
+
+
+        .badge {
+            padding: 4px 8px 4px 4px;
+            border-radius: 32px;
+            pointer-events: none;
+        }
+
+    }
+}

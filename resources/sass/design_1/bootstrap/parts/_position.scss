@@ -1,0 +1,81 @@
+// Common values
+
+$positions: static, relative, absolute, fixed, sticky !default;
+$zindex-fixed: 1030 !default;
+$zindex-sticky: 1020 !default;
+
+@each $position in $positions {
+    .position-#{$position} {
+        position: $position !important;
+    }
+}
+
+// Shorthand
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-fixed;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-fixed;
+}
+
+.sticky-top {
+    @supports (position: sticky) {
+        position: sticky;
+        top: 0;
+        z-index: $zindex-sticky;
+    }
+}
+
+.position-top-0 {
+    top: 0;
+}
+
+.position-bottom-0 {
+    bottom: 0;
+}
+
+.position-right-0 {
+    right: 0;
+
+    .rtl & {
+        right: auto;
+        left: 0;
+    }
+}
+
+.position-right-minus-10 {
+    right: -10px;
+
+    .rtl & {
+        right: auto;
+        left: -10px;
+    }
+}
+
+.position-left-0 {
+    left: 0;
+
+    .rtl & {
+        left: auto;
+        right: 0;
+    }
+}
+
+
+$z-values: 1, 2, 3, 4, 5, 8, 10, 15, 16;
+
+@each $z in $z-values {
+    .z-index-#{$z} {
+        z-index: $z;
+    }
+}

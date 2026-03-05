@@ -1,0 +1,114 @@
+.auth-page-card {
+
+    &__mask {
+        position: absolute;
+        top: -32px;
+        right: -32px;
+        bottom: -32px;
+        left: 40%;
+        border-radius: 64px;
+        background: var(--gray-200);
+        z-index: 1;
+    }
+
+    .auth-register-method-item {
+        label {
+            height: 40px;
+            border-radius: 8px;
+            color: var(--gray-500);
+            background-color: var(--white);
+            transition: all .2s ease;
+
+            &:hover {
+                background-color: var(--gray-100);
+            }
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+
+            &:checked ~ label {
+                color: var(--white);
+                background-color: var(--primary);
+            }
+        }
+    }
+
+    .password-input-visibility {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        z-index: 3;
+
+        .rtl & {
+            right: auto;
+            left: 12px;
+        }
+    }
+
+    .auth-slider-container {
+        min-height: 630px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .auth-slider-image {
+            width: 240px;
+            height: 240px;
+        }
+    }
+}
+
+.auth-theme-slider-pagination {
+    position: absolute;
+    top: auto;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px !important;
+
+
+    .swiper-pagination-bullet {
+        margin: 0;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--primary);
+        opacity: 0.4;
+        transition-duration: 300ms;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 2rem;
+        border-radius: 1.5rem;
+        background-color: var(--primary);
+        opacity: 1;
+    }
+}
+
+.auth-verification-code-field {
+    width: 69px;
+    height: 72px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    background-color: var(--white);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 8px;
+    text-align: center;
+}
+
+.resend-verification-code-timer {
+    .jst-hours {
+        display: none;
+    }
+}
+
+.auth-page-form-container {
+    height: 387px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

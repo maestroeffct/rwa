@@ -1,0 +1,91 @@
+@keyframes chwfiti-floating-image-1-animation {
+  0%, 100% {
+    transform: translate(8px, 2px);
+  }
+  50% {
+    transform: translate(40px, -28px);
+  }
+}
+@keyframes chwfiti-floating-image-2-animation {
+  0%, 100% {
+    transform: translate(8px, 16px);
+  }
+  50% {
+    transform: translate(-24px, -12px);
+  }
+}
+.centered-hero-with-four-images-two-icons-section {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0 24px;
+}
+@media (max-width: 991px) {
+  .centered-hero-with-four-images-two-icons-section {
+    height: auto;
+    padding: 24px 0;
+  }
+}
+.centered-hero-with-four-images-two-icons-section__upper-cta-badge-icon {
+  display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+.centered-hero-with-four-images-two-icons-section .title-highlighted-word {
+  transform: rotate(-2deg);
+}
+.centered-hero-with-four-images-two-icons-section .section-floating-icon-1 {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  bottom: 0;
+  left: -30%;
+  z-index: 2;
+  animation: chwfiti-floating-image-1-animation 4s ease-in-out infinite;
+}
+.centered-hero-with-four-images-two-icons-section .section-floating-icon-1 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.rtl .centered-hero-with-four-images-two-icons-section .section-floating-icon-1 {
+  left: auto;
+  right: -30%;
+}
+.centered-hero-with-four-images-two-icons-section .section-floating-icon-2 {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  bottom: 10%;
+  right: -30%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  animation: chwfiti-floating-image-2-animation 4s ease-in-out infinite;
+}
+.centered-hero-with-four-images-two-icons-section .section-floating-icon-2 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.rtl .centered-hero-with-four-images-two-icons-section .section-floating-icon-2 {
+  right: auto;
+  left: -30%;
+}
+.centered-hero-with-four-images-two-icons-section__main-images {
+  position: relative;
+  width: 280px;
+  height: 480px;
+}
+.centered-hero-with-four-images-two-icons-section__main-images, .centered-hero-with-four-images-two-icons-section__main-images img {
+  border-radius: 140px;
+}
+.centered-hero-with-four-images-two-icons-section__main-images:nth-child(1), .centered-hero-with-four-images-two-icons-section__main-images:nth-child(4) {
+  top: -64px;
+}
+@media (max-width: 991px) {
+  .centered-hero-with-four-images-two-icons-section__main-images {
+    width: 44%;
+    height: 240px;
+    top: 0 !important;
+  }
+}

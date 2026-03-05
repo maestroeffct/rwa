@@ -1,0 +1,45 @@
+.subscription-plans-section {
+  padding: 84px 0;
+  overflow: hidden;
+}
+.subscription-plans-section:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -50px;
+  right: -50px;
+  transform: rotate(-1deg);
+  background-color: var(--section-bg);
+  z-index: 1;
+}
+.subscription-plans-section__floating-image {
+  position: absolute;
+  bottom: -104px;
+  left: 0;
+  width: 160px;
+  height: 160px;
+}
+.subscription-plans-section__floating-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.rtl .subscription-plans-section__floating-image {
+  left: auto;
+  right: 0;
+}
+.subscription-plans-section .subscription-plan-card {
+  min-height: 504px;
+  height: 504px;
+}
+@media (max-width: 991px) {
+  .subscription-plans-section {
+    height: auto;
+    padding: 40px 0;
+  }
+  .subscription-plans-section__floating-image {
+    top: -28px;
+    bottom: auto;
+    width: 100px;
+    height: 100px;
+  }
+}

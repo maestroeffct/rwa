@@ -1,0 +1,75 @@
+
+.wrunner__valueNote_theme_default.wrunner__valueNote {
+    display: flex !important;
+    align-content: center;
+    justify-content: center;
+    color: var(--gray-400) !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: inherit !important;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 8px !important;
+    border: 1px solid var(--gray-200) !important;
+    background: var(--gray-100) !important;
+    top: 16px !important;
+
+    &:after {
+        display: none !important;
+    }
+}
+
+.wrunner__pathPassed_theme_default.wrunner__pathPassed {
+    background-color: var(--primary) !important;
+}
+
+.wrunner__divisions_theme_default.wrunner__divisions {
+    display: none !important;
+}
+
+.wrunner__handle_theme_default.wrunner__handle {
+    background-color: #FFFFFF !important;
+    width: 16px;
+    height: 16px;
+    border: solid 2px var(--primary) !important;
+
+}
+
+.wrunner__outer_theme_default.wrunner__outer_direction_horizontal {
+    height: 70px !important;
+
+    .wrunner__path_theme_default.wrunner__path_direction_horizontal {
+        bottom: 4px;
+        top: auto !important;
+    }
+}
+
+.wrunner-value-bottom {
+
+    &.no-bottom-value-note {
+        .wrunner__valueNote {
+            display: none !important;
+        }
+    }
+
+    .wrunner__valueNote {
+        top: unset !important;
+        bottom: -18px;
+
+        &:after {
+            bottom: unset !important;
+            top: -7px;
+            border-top-color: transparent !important;
+            border-bottom-color: $gray-200 !important;
+        }
+    }
+
+    .wrunner__path_theme_default.wrunner__path_direction_horizontal {
+        top: 5px !important;
+    }
+
+    .wrunner__outer_theme_default.wrunner__outer_direction_horizontal {
+        height: 2rem !important;
+    }
+}

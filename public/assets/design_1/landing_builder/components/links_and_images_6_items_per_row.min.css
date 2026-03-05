@@ -1,0 +1,10 @@
+.links-and-images-6-items-per-row-section__link-box {
+  transition: all 0.3s ease;
+}
+.links-and-images-6-items-per-row-section__link-box-img {
+  width: 100%;
+  height: 120px;
+}
+.links-and-images-6-items-per-row-section__link-box:hover {
+  transform: translateY(-8px);
+}

@@ -1,0 +1,38 @@
+@import "../../bootstrap/variables";
+
+.sliding-events-section {
+
+    &__contents {
+        height: 700px;
+        padding-top: 80px;
+
+        &-bg-wrapper {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 1;
+        }
+    }
+
+    &__circle-dot-separator {
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        opacity: 0.5;
+        background-color: var(--white);
+
+        &:last-child {
+            display: none;
+        }
+    }
+
+    &__slider-container {
+        position: relative;
+        top: -242px;
+        margin-bottom: -218px;
+        z-index: 3;
+    }
+}
+

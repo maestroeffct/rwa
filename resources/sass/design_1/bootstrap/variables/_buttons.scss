@@ -1,0 +1,62 @@
+// Buttons variables
+
+$btn-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+
+$btn-focus-width: .2rem !default;
+$btn-font-family: $font-family-base;
+$btn-font-weight: $font-weight-400;
+$sm-btn-font-weight: $font-weight-400;
+$lg-btn-font-weight: $font-weight-400;
+$xlg-btn-font-weight: $font-weight-400;
+
+$btn-white-space: null !default;
+$btn-border-width: 1px !default;
+$outline-btn-border-width: 1.5px !default;
+
+$btn-font-size: 14px;
+$sm-btn-font-size: $font-size-base;
+$lg-btn-font-size: $font-size-base;
+$xlg-btn-font-size: $font-size-base;
+
+$sm-btn-height: 35px;
+$md-btn-height: 41px;
+$lg-btn-height: 48px;
+$xlg-btn-height: 61px;
+$sm-btn-padding-x: 16px;
+$md-btn-padding-x: 18px;
+$lg-btn-padding-x: 20px;
+$xlg-btn-padding-x: 28px;
+
+$btn-line-height: 500; // Used instead of font-weight
+$btn-line-height-lg: $btn-line-height; // Used instead of font-weight
+$btn-line-height-sm: normal; // Used instead of font-weight
+
+$btn-border-radius: 10px;
+$sm-btn-border-radius: 8px;
+$lg-btn-border-radius: 10px;
+$xlg-btn-border-radius: 12px;
+
+$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+$btn-focus-width: 0;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$btn-disabled-opacity: .65 !default;
+
+$button-colors: ();
+$button-colors: map-merge(
+        (
+            "primary": $primary,
+            "secondary": $secondary,
+            "accent": $accent,
+            "success": $success,
+            "info": $info,
+            "warning": $warning,
+            "danger": $danger,
+            // "dark": $dark,
+            "white": $white,
+            // "gray200": $gray-200,
+        ),
+        $button-colors
+);

@@ -1,0 +1,46 @@
+.bundle-card__image {
+  width: 192px;
+  min-width: 192px;
+  height: 228px;
+  overflow: hidden;
+}
+.bundle-card__image img {
+  transition: all 0.4s ease;
+}
+.bundle-card:hover .bundle-card__image img {
+  transform: scale(1.1);
+}
+.bundle-card__content {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 160px;
+  right: 0;
+  z-index: 1;
+}
+.bundle-card__title {
+  max-height: 42px;
+  font-weight: 700;
+  line-height: 21px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.rtl .bundle-card .bundle-card__content {
+  left: 0;
+  right: 160px;
+}
+@media (max-width: 991px) {
+  .bundle-card {
+    margin-bottom: 122px;
+  }
+  .bundle-card__image {
+    width: 100%;
+    min-width: 100%;
+  }
+  .bundle-card__content {
+    right: 16px;
+    left: 16px;
+    top: 170px;
+    bottom: auto;
+  }
+}

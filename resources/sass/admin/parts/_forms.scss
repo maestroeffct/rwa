@@ -1,0 +1,50 @@
+.form-group {
+    position: relative;
+
+    .has-translation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 30px;
+        right: 6px;
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+        z-index: 1;
+        border-radius: 8px;
+
+        .rtl & {
+            right: auto;
+            left: 6px;
+        }
+    }
+}
+
+.custom-file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .custom-file-input {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+.custom-switch-design-2 {
+    .custom-switch {
+        .custom-control-label {
+
+            &::before {
+                top: -0.75rem !important;
+            }
+
+            &::after {
+                top: -0.65rem !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.admin-auth-pages {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    &__bg {
+        width: 100vw;
+        height: calc(100vh - 76px);
+
+
+        @media (max-width: $screen-sm-max) {
+            height: calc(100vh - 106px);
+        }
+    }
+
+    &__contents {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 440px;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        @media (max-width: $screen-sm-max) {
+            width: 100%;
+        }
+
+        .content-box {
+            &__mask {
+                position: absolute;
+                inset: 8px;
+                bottom: -8px;
+                border-radius: 24px;
+                opacity: 0.2;
+                background-color: var(--white);
+                z-index: 1;
+            }
+
+            &__logo {
+                height: 64px;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .password-input-visibility {
+                position: absolute;
+                top: 50%;
+                right: 12px;
+                transform: translateY(-50%);
+                z-index: 3;
+
+                .rtl & {
+                    right: auto;
+                    left: 12px;
+                }
+            }
+
+        }
+    }
+}

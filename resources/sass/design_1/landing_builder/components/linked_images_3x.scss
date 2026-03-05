@@ -1,0 +1,80 @@
+@import "../../bootstrap/variables";
+
+.linked-images-3x-section {
+    width: 100%;
+    height: 795px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    &__item-card {
+        position: relative;
+        width: 440px;
+        height: 280px;
+
+        &-overlay {
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            transition: all 0.3s ease-in-out;
+
+            &.enable-overlay {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .dark-mode &.enable-overlay {
+                background-color: rgba(225, 234, 246, 0.4);
+            }
+
+            .overlay-contents {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 4;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .line-divider {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 4;
+                width: 1px;
+                height: 16px;
+                background-color: var(--white);
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.6);
+
+                .dark-mode & {
+                    background-color: rgba(225, 234, 246, 0.6);
+                }
+
+                .overlay-contents {
+                    top: calc(50% - 24px);
+                }
+
+                .line-divider {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+
+        &__item-card {
+            width: 100%;
+        }
+    }
+}
+

@@ -1,0 +1,24 @@
+.gift-item-card {
+
+    &__image {
+        height: 226px;
+
+        &, & img {
+            border-radius: 16px 16px 0 0;
+        }
+    }
+
+    &__body {
+        height: 192px;
+        border-radius: 0 0 16px 16px;
+        border: 1px solid var(--gray-200);
+        border-top: none;
+        background: var(--white);
+
+        .course-title {
+            max-height: 42px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}

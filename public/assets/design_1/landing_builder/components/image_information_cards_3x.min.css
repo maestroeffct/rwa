@@ -1,0 +1,28 @@
+.image-information-cards-3x-section__item-card {
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+}
+.image-information-cards-3x-section__item-card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 167px;
+  border-radius: 0 0 24px 24px;
+  background: linear-gradient(0deg, #000 0.34%, rgba(0, 0, 0, 0) 99.89%);
+  transition: all 0.3s ease-out;
+  z-index: 2;
+  padding: 64px 24px 24px;
+}
+.dark-mode .image-information-cards-3x-section__item-card-footer {
+  background: linear-gradient(0deg, #E1EAF6 0.34%, rgba(225, 234, 246, 0) 99.89%);
+}
+.image-information-cards-3x-section__item-card:hover .image-information-cards-3x-section__item-card-footer {
+  padding: 184px 24px 40px;
+}
+@media (max-width: 991px) {
+  .image-information-cards-3x-section__item-card {
+    height: 380px;
+  }
+}

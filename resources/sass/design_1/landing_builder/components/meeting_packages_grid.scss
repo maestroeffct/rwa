@@ -1,0 +1,54 @@
+@import "../../bootstrap/variables";
+
+.meeting-packages-grid-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+
+    &__floating-image-1, &__floating-image-2 {
+        position: absolute;
+        bottom: -88px;
+        width: 208px;
+        height: 208px;
+        aspect-ratio: 1/1;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__floating-image-1 {
+        left: 0;
+
+        .rtl & {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    &__floating-image-2 {
+        right: 0;
+
+        .rtl & {
+            right: auto;
+            left: 0;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+
+        &__floating-image-1, &__floating-image-2 {
+            bottom: -54px;
+            width: 104px;
+            height: 104px;
+        }
+
+    }
+
+}
+

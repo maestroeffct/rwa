@@ -1,0 +1,54 @@
+$rounded-pill: 50rem !default;
+
+$borderRadius: ();
+$borderRadius: map-merge(
+        (
+            "0" : 0px,
+            "4" : 4px,
+            "5" : 5px,
+            "6" : 6px,
+            "8" : 8px,
+            "10" : 10px,
+            "12" : 12px,
+            "15" : 15px,
+            "16" : 16px,
+            "20" : 20px,
+            "24" : 24px,
+            "30" : 30px,
+            "32" : 32px,
+            "36" : 36px,
+        ),
+        $borderRadius
+);
+
+@each $size, $radius in $borderRadius {
+    .rounded-#{$size} {
+        border-radius: $radius !important;
+    }
+
+    .rounded-lg-#{$size} {
+        @media (min-width: $screen-sm-max) {
+            border-radius: $radius !important;
+        }
+    }
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.rounded-pill {
+    border-radius: $rounded-pill !important;
+}
+
+.rounded-top-20 {
+    border-radius: 20px 20px 0 0;
+}
+
+.rounded-bottom-20 {
+    border-radius: 0 0 20px 20px;
+}
+
+.rounded-bottom-32 {
+    border-radius: 0 0 32px 32px;
+}

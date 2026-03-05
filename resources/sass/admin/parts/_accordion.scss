@@ -1,0 +1,35 @@
+.accordion {
+
+    &__title {
+
+        &-icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .collapse-arrow-icon {
+        transition: 0.3s;
+        transform: none;
+
+        &.arrow-down {
+            transform: rotateZ(180deg);
+        }
+
+        &.arrow-right {
+            &.arrow-down {
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+
+    &__collapse {
+        position: relative;
+
+        &.show {
+            padding-top: 16px;
+            margin-top: 16px;
+            border-top: 1px solid $gray-100;
+        }
+    }
+}

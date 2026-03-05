@@ -1,0 +1,80 @@
+.registration-current-package__mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 16px;
+  opacity: 0.2;
+  background: var(--primary);
+  z-index: 1;
+}
+.registration-current-package__right-float-image {
+  position: absolute;
+  top: -36px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  z-index: 4;
+}
+.rtl .registration-current-package__right-float-image {
+  right: auto;
+  left: -60px;
+}
+.registration-current-package__cup-icon-mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary);
+  opacity: 0.2;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.registration-package-badge-popular {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+}
+
+.registration-package-radio label .registration-package-label-card {
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.registration-package-radio label .card-mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 16px;
+  opacity: 0.5;
+  background: var(--white);
+  border: 1px solid transparent;
+  z-index: 1;
+}
+.registration-package-radio label:hover .registration-package-label-card, .registration-package-radio label:hover .card-mask {
+  border: 1px solid var(--primary);
+}
+.registration-package-radio input[type=radio] {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.registration-package-radio input[type=radio]:checked + label .registration-package-label-card, .registration-package-radio input[type=radio]:checked + label .card-mask {
+  border: 1px solid var(--primary);
+}
+
+.registration-package-card__icon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--gray-300);
+  opacity: 0.2;
+}

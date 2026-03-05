@@ -1,0 +1,128 @@
+@import "../../bootstrap/variables";
+
+.featured-courses-section {
+    position: relative;
+
+    &__floating-background {
+        position: absolute;
+        top: -80px;
+        left: 24px;
+        width: 226px;
+        height: 272px;
+        transform: rotate(-23.441deg);
+        z-index: 2;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .rtl & {
+            left: auto;
+            right: 24px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            width: 114px;
+            height: 136px;
+            left: 0;
+
+            .rtl & {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+
+    &__item-card {
+        height: 600px;
+
+        &-overlay-image {
+            position: absolute;
+            bottom: -40px;
+            right: -80px;
+            width: 200px;
+            height: 200px;
+            z-index: 3;
+
+            img {
+                max-height: 100%;
+            }
+
+            .rtl & {
+                right: auto;
+                left: -80px;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                width: 88px;
+                height: 88px;
+                right: 0;
+
+                .rtl & {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+
+        &-course-box {
+            width: 540px;
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            top: 16px;
+            z-index: 3;
+
+            .rtl & {
+                left: auto;
+                right: 16px;
+            }
+
+            &-description {
+                max-height: 315px;
+                overflow: hidden;
+            }
+        }
+
+        &-slider-navigation {
+            position: absolute;
+            top: 30% !important;
+            width: 48px !important;
+            height: 48px !important;
+
+            &.swiper-button-next {
+                right: 38px !important;
+            }
+
+            &.swiper-button-prev {
+                left: 38px !important;
+            }
+
+            &:after {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: 400px;
+
+            &-course-box {
+                width: auto;
+                right: 16px;
+
+                .rtl & {
+                    left: 16px;
+                    right: 16px;
+                }
+
+                &-description {
+                    max-height: 142px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+}
+

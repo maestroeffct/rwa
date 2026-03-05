@@ -1,0 +1,36 @@
+@import "../../bootstrap/variables";
+
+.image-information-cards-3x-section {
+
+    &__item-card {
+        width: 100%;
+        height: 580px;
+        overflow: hidden;
+
+        &-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            min-height: 167px;
+            border-radius: 0 0 24px 24px;
+            background: linear-gradient(0deg, #000 0.34%, rgba(0, 0, 0, 0.00) 99.89%);
+            transition: all 0.3s ease-out;
+            z-index: 2;
+            padding: 64px 24px 24px;
+
+            .dark-mode & {
+                background: linear-gradient(0deg, #E1EAF6 0.34%, rgba(225, 234, 246, 0.00) 99.89%);
+            }
+        }
+
+        &:hover &-footer {
+            padding: 184px 24px 40px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: 380px;
+        }
+    }
+}
+

@@ -1,0 +1,31 @@
+.best-rated-courses-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary);
+  border-radius: 48px;
+  padding: 24px 48px 48px;
+  margin-right: -48px;
+  margin-left: -48px;
+}
+.best-rated-courses-section__floating-icon {
+  position: absolute;
+  width: 208px;
+  height: 208px;
+  bottom: -48px;
+}
+.best-rated-courses-section__floating-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (max-width: 991px) {
+  .best-rated-courses-section {
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 48px 24px;
+  }
+  .best-rated-courses-section__floating-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,72 @@
+$transparentNumbers: 10, 20, 30, 40, 50, 60;
+
+@mixin bgWithTransparent($bg, $size) {
+    position: relative;
+
+    & * {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: #{$size / 100};
+        z-index: 1;
+        background-color: var(--#{$bg}) !important;
+        border-radius: inherit; // use parent
+    }
+}
+
+
+@each $bg, $color in $theme-colors {
+    .bg-#{$bg} {
+        background-color: var(--#{$bg}) !important;
+    }
+
+    .bg-hover-#{$bg} {
+        &:hover {
+            background-color: var(--#{$bg}) !important;
+        }
+    }
+
+    @each $number in $transparentNumbers {
+        .bg-#{$bg}-#{$number} {
+            @include bgWithTransparent($bg, $number);
+        }
+    }
+}
+
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.bg-black-40 {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.bg-info-gradient {
+    background: linear-gradient(61deg, #277DFF 35.76%, #7EB2FF 97.93%);
+}
+
+
+/*
+| Make Social bg
+*/
+
+
+@each $bg, $color in $socialColors {
+    .text-#{$bg} {
+        color: var(--#{$bg}) !important;
+    }
+
+    .bg-#{$bg} {
+        background-color: var(--#{$bg}) !important;
+    }
+
+    .bg-#{$bg}-50 {
+        @include bgWithTransparent($bg, 50);
+    }
+}

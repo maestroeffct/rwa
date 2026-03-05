@@ -1,0 +1,53 @@
+.meeting-booking-list-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 80px 0;
+}
+.meeting-booking-list-section__cta-image {
+  width: 140px;
+  min-width: 140px;
+  height: 140px;
+}
+.meeting-booking-list-section__cta-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.meeting-booking-list-section__table-container {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .meeting-booking-list-section__table-container {
+    overflow-x: auto;
+  }
+}
+.meeting-booking-list-section__meetings-table {
+  width: 100%;
+  padding: 0 24px 24px;
+  border-radius: 32px;
+  background: var(--white);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.02);
+  margin-top: 72px;
+}
+.meeting-booking-list-section__meetings-table thead {
+  position: relative;
+  top: -32px;
+}
+.meeting-booking-list-section__meetings-table thead td {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--white);
+  opacity: 0.7;
+}
+.meeting-booking-list-section__meetings-table tbody tr td {
+  padding-bottom: 24px;
+  padding-top: 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.meeting-booking-list-section__meetings-table tbody tr:first-child td {
+  padding-top: 0;
+}
+.meeting-booking-list-section__meetings-table tbody tr:last-child td {
+  padding-bottom: 0;
+  border-bottom: none;
+}

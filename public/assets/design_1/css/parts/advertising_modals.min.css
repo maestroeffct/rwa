@@ -1,0 +1,78 @@
+.custom-advertising-modal .swal2-popup {
+  background-color: transparent !important;
+}
+.custom-advertising-modal .swal2-popup .swal2-html-container {
+  overflow: visible !important;
+}
+.custom-advertising-modal .swal2-popup .basic-modal-body {
+  background-color: var(--white);
+  border-radius: 24px;
+}
+
+.advertising-modal {
+  position: relative;
+}
+.advertising-modal__image {
+  width: 100%;
+  height: 220px;
+  border-radius: 24px 24px 0 0;
+}
+.advertising-modal__image img {
+  border-radius: 24px 24px 0 0;
+}
+.advertising-modal__icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px;
+  min-width: 76px;
+  height: 76px;
+  z-index: 4;
+}
+.advertising-modal__autoclose {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 2;
+}
+.advertising-modal__autoclose .autoclose-progress-bar {
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: all 0.5s ease;
+}
+.advertising-modal__countdown-card {
+  width: 234px;
+  height: 84px;
+  z-index: 4;
+}
+.advertising-modal__countdown .mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  z-index: 1;
+}
+.advertising-modal__countdown:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  height: 1px;
+  background-color: var(--gray-200);
+  z-index: 1;
+}
+.advertising-modal__button {
+  position: absolute;
+  right: 16px;
+  left: 16px;
+  bottom: -47px;
+  z-index: 245;
+}

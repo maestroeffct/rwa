@@ -1,0 +1,98 @@
+/* Navbar Sticky Animation */
+@keyframes navbarSticky {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-60px);
+        transform: translateY(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* Loading Animations */
+
+@-moz-keyframes sc-pending {
+    to {
+        background-position: 16px 0
+    }
+}
+
+@-webkit-keyframes sc-pending {
+    to {
+        background-position: 16px 0
+    }
+}
+
+@-o-keyframes sc-pending {
+    to {
+        background-position: 16px 0
+    }
+}
+
+@keyframes sc-pending {
+    to {
+        background-position: 16px 0
+    }
+}
+
+
+@keyframes pluse {
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg);
+    }
+    10% {
+        transform: rotate(14.0deg);
+    }
+    20% {
+        transform: rotate(-8.0deg);
+    }
+    30% {
+        transform: rotate(14.0deg);
+    }
+    40% {
+        transform: rotate(-4.0deg);
+    }
+    50% {
+        transform: rotate(10.0deg);
+    }
+    60% {
+        transform: rotate(0.0deg);
+    }
+    100% {
+        transform: rotate(0.0deg);
+    }
+}
+

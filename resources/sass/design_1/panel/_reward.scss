@@ -1,0 +1,92 @@
+.reward-your-points-card {
+    background-image: url("/assets/design_1/img/panel/reward/reward-your-points-mask.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .reward-your-points-cash-img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+.reward-your-points-exchange-card {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        bottom: -8px;
+        left: 8px;
+        right: 8px;
+        z-index: -1;
+        border-radius: 16px;
+        opacity: 0.4;
+        background-color: var(--gray-200);
+    }
+}
+
+.reward-leaderboard-user-card {
+    position: relative;
+    height: 129px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        bottom: -8px;
+        left: 8px;
+        right: 8px;
+        z-index: -1;
+        border-radius: 16px;
+        border: 1px dashed var(--gray-300);
+    }
+
+
+    .user-avatar {
+        position: relative;
+        top: -24px;
+        margin-bottom: -24px;
+
+        &.most-points-user {
+            top: -28px;
+            margin-bottom: -28px;
+            border: 4px solid var(--primary);
+        }
+    }
+
+    .reward-leaderboard-user-name {
+        height: 32px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+
+.bonus-status-complete-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    top: 36px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary);
+
+    .rtl & {
+        right: auto;
+        left: 12px;
+    }
+}
+
+.how-to-get-bonus-items {
+    position: relative;
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

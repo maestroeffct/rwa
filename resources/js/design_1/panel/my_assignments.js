@@ -1,0 +1,15 @@
+(function ($) {
+    "use strict";
+
+    function errorToast(heading, text) {
+        showToast('error', heading, text)
+    }
+
+    $('body').on('click', '.not-access-toast', function (e) {
+        e.preventDefault();
+
+        if (notAccessToastTitleLang && notAccessToastMsgLang) {
+            errorToast(notAccessToastTitleLang, notAccessToastMsgLang);
+        }
+    });
+})(jQuery);

@@ -1,0 +1,12 @@
+.newest-courses-section {
+  width: 100%;
+  height: 760px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 991px) {
+  .newest-courses-section {
+    height: auto;
+  }
+}

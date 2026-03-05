@@ -1,0 +1,489 @@
+@import "../bootstrap/variables";
+
+.gift-modal-item-img {
+    width: 90px;
+    height: 64px;
+}
+
+.student-dashboard {
+
+    &__hello-box {
+        height: 376px;
+
+        &-bg {
+            position: absolute;
+            inset: 0;
+            background-color: var(--primary);
+            background-image: url("/assets/design_1/img/panel/dashboard/student/hello-box-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .rtl & {
+                transform: scaleX(-1);
+            }
+        }
+
+
+        @media (max-width: $screen-sm-max) {
+            &-course-col {
+                &:nth-child(n+2) {
+                    display: none;
+                }
+            }
+        }
+
+        .hello-box-user-vector {
+            position: absolute;
+            top: -54px;
+            bottom: 0;
+            right: -8px;
+            left: 0;
+            height: 430px;
+        }
+    }
+
+    &__active-subscribe-card {
+        height: 130px;
+
+        &-bg {
+            position: absolute;
+            inset: 0;
+            background-color: var(--dark);
+            background-image: url("/assets/design_1/img/panel/dashboard/student/active-subscribe-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+
+            .rtl & {
+                transform: scaleX(-1);
+            }
+        }
+
+        .progress-card {
+            width: 60%;
+        }
+    }
+
+    &__no-subscribe-card {
+        height: 147px;
+
+        &-bg {
+            position: absolute;
+            inset: 0;
+            background-color: var(--primary);
+            background-image: url("/assets/design_1/img/panel/dashboard/student/no-subscribe-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+
+            .rtl & {
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    &__my-assignment-box {
+        height: 208px;
+
+        @media (max-width: $screen-sm-max) {
+            height: 165px;
+        }
+    }
+
+    &__empty-support-messages-card {
+        overflow: hidden;
+        padding-top: 172px !important;
+        min-height: 250px;
+
+        .group-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            img {
+                width: 284px;
+                height: 178px;
+            }
+
+            .rtl & {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+
+    &__learning-activity-chart {
+        height: 354px;
+    }
+
+    &__noticeboards-lists {
+        height: 406px;
+    }
+
+    &__support-messages {
+        height: 406px;
+    }
+
+    &__no-meeting-avatars {
+        position: relative;
+        z-index: 1;
+
+        &.avatar-1 {
+            right: -16px;
+        }
+
+        &.avatar-3 {
+            left: -16px;
+        }
+    }
+
+}
+
+.dashboard-current-balance-box {
+    height: 205px;
+    background-color: var(--primary);
+    background-image: url("/assets/design_1/img/panel/dashboard/student/current_balance.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    & div:first-child {
+        height: calc(100% - 47px);
+    }
+
+    &__footer {
+        border-radius: 0 0 16px 16px;
+        opacity: 0.6;
+        background: var(--black);
+        height: 47px;
+    }
+
+    &__mask {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        left: 12px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.2;
+        background: var(--primary);
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.02);
+        z-index: 1;
+    }
+}
+
+.dashboard-events-calendar {
+    height: 340px;
+
+    &__day-box {
+        width: 48px;
+        min-width: 48px;
+        height: 52px;
+    }
+
+    .datepicker-plot-area {
+        font-family: var(--font-family-base) !important;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0 !important;
+        border: none !important;
+        background-color: var(--white);
+
+        .datepicker-navigator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            background-color: var(--white);
+            border-radius: 0;
+            border-bottom: none;
+
+            .pwt-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.pwt-btn-prev, &.pwt-btn-next {
+                    position: relative;
+                    color: var(--gray-500);
+                    border-radius: 8px;
+                    width: 32px;
+                    min-width: 32px;
+                    height: 32px;
+
+                    & * {
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    /*&:before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        opacity: .2;
+                        z-index: 1;
+                        background-color: var(--info) !important;
+                        border-radius: inherit; // use parent
+                    }*/
+                }
+
+                &.pwt-btn-switch {
+                    width: auto !important;
+                    color: var(--black);
+                    margin: 0 32px !important;
+                    font-weight: bold !important;
+                    font-size: 14px !important;
+                }
+            }
+        }
+
+        .datepicker-day-view {
+            background-color: transparent !important;
+
+            .month-grid-box {
+                margin: 0 !important;
+                background-color: transparent !important;
+
+                .header {
+                    padding: 6px 0 !important;
+                    background-color: var(--white) !important;
+
+                    .header-row-cell {
+                        color: var(--black) !important;
+                        font-size: 12px !important;
+                    }
+                }
+            }
+
+            .table-days {
+                margin-top: 0;
+                border-radius: 12px;
+                padding: 0 12px 12px 12px;
+                background-color: var(--white) !important;
+
+                tr {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 6px;
+                    margin-top: 6px;
+
+
+                    td {
+                        width: auto !important;
+                        height: auto !important;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+                            font-size: 12px !important;
+                            border-radius: 8px;
+                            padding: 8px !important;
+                            color: var(--black) !important;
+                            background-color: var(--white) !important;
+                            border: none !important;
+                            text-shadow: none !important;
+                            line-height: 21px !important;
+                        }
+
+                        &:hover > span {
+                            color: var(--black) !important;
+                            background-color: var(--gray-100) !important;
+                        }
+
+                        &.disabled > span {
+                            color: var(--gray-400) !important;
+                        }
+
+                        &.selected > span {
+                            background-color: var(--gray-100) !important;
+                            border-color: var(--gray-100) !important;
+                            color: var(--black) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .datepicker-month-view, .datepicker-year-view {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 0 !important;
+            padding: 4px;
+            background-color: var(--white) !important;
+
+            .month-item, .year-item {
+                width: auto !important;
+                height: auto !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                color: var(--black) !important;
+                background-color: var(--white) !important;
+                border: 1px solid var(--gray-200) !important;
+                border-radius: 8px;
+                text-shadow: none !important;
+
+                &.selected {
+                    background-color: var(--gray-100) !important;
+                    border-color: var(--gray-100) !important;
+                    color: var(--black) !important;
+                }
+
+                &:hover:not(.selected) {
+                    color: var(--black) !important;
+                    background-color: var(--gray-100) !important;
+                }
+
+                &.month-item-disable, &.year-item-disable {
+                    color: var(--gray-400) !important;
+                    background-color: var(--white) !important;
+                }
+            }
+        }
+
+        .toolbox {
+            display: none;
+            margin-top: 0;
+            background-color: #ffffff;
+        }
+    }
+}
+
+.dashboard-body {
+
+    .progress-card {
+        position: relative;
+        width: 100%;
+        height: 8px;
+        border-radius: 4px;
+        padding: 2px;
+
+        .progress-bar {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 0;
+            height: 4px;
+            border-radius: 4px;
+        }
+    }
+
+}
+
+
+/***********
+| Instructor Dashboard
+*/
+.instructor-dashboard {
+
+    &__hello-box {
+        height: 376px;
+
+
+        &-bg {
+            position: absolute;
+            inset: 0;
+            background-color: var(--dark);
+            background-image: url("/assets/design_1/img/panel/dashboard/instructor/hello-box-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &.organ-hello-box {
+                background-image: url("/assets/design_1/img/panel/dashboard/organ/hello-box-bg.png");
+            }
+
+            .rtl & {
+                transform: scaleX(-1);
+            }
+        }
+
+        .hello-box-user-vector {
+            position: absolute;
+            top: -54px;
+            bottom: 0;
+            right: -8px;
+            left: 0;
+            height: 430px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            &-course-col {
+                &:nth-child(n+2) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__hello-box-money-image {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        right: 16px;
+        bottom: 12px;
+        top: -16px;
+
+        .rtl & {
+            right: auto;
+            left: 16px;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__sales-overview-chart {
+        height: 354px;
+    }
+
+    &__active-registration-card {
+        height: 130px;
+
+        &-bg {
+            position: absolute;
+            inset: 0;
+            background-color: var(--dark);
+            background-image: url("/assets/design_1/img/panel/dashboard/instructor/active-registration-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+
+            .rtl & {
+                transform: scaleX(-1);
+            }
+        }
+
+        .progress-card {
+            width: 60%;
+        }
+    }
+
+    &__no-registration-card {
+        height: 147px;
+
+        &-bg {
+            position: absolute;
+            inset: 0;
+            background-color: var(--primary);
+            background-image: url("/assets/design_1/img/panel/dashboard/instructor/no-registration-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+
+            .rtl & {
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    &__visitors-statistics-chart {
+        height: 244px;
+    }
+}

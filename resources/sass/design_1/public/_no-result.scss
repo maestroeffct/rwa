@@ -1,0 +1,28 @@
+
+.no-result {
+    .no-result-logo {
+        position: relative;
+        width: 400px;
+        height: 300px;
+
+        &.logo-sm {
+            width: 200px;
+            height: 150px;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            width: 200px;
+            height: 150px;
+
+            &.logo-sm {
+                width: 100px;
+                height: 75px;
+            }
+        }
+    }
+
+    &.mt-0 {
+        margin-top: 0 !important;
+    }
+
+}

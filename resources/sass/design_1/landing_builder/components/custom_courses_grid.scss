@@ -1,0 +1,77 @@
+@import "../../bootstrap/variables";
+
+.custom-courses-grid-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--section-bg);
+    padding: 60px 48px;
+    margin-right: -48px;
+    margin-left: -48px;
+    border-radius: 48px;
+
+
+    &__floating-image-1, &__floating-image-2 {
+        position: absolute;
+        bottom: -84px;
+        width: 208px;
+        height: 208px;
+        aspect-ratio: 1/1;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__floating-image-1 {
+        left: 48px;
+
+        .rtl & {
+            left: auto;
+            right: 48px;
+        }
+    }
+
+    &__floating-image-2 {
+        right: 48px;
+
+        .rtl & {
+            right: auto;
+            left: 48px;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+
+        &__floating-image-1, &__floating-image-2 {
+            bottom: -54px;
+            width: 104px;
+            height: 104px;
+        }
+
+        &__floating-image-1 {
+            left: 24px;
+
+            .rtl & {
+                left: auto;
+                right: 24px;
+            }
+        }
+
+        &__floating-image-2 {
+            right: 24px;
+
+            .rtl & {
+                right: auto;
+                left: 24px;
+            }
+        }
+
+    }
+
+}
+

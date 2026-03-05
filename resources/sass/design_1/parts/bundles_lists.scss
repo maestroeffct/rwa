@@ -1,0 +1,82 @@
+@import "../bootstrap/variables";
+
+.bundles-lists-hero {
+    width: 100%;
+    height: 320px;
+
+    img {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__mask {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(1deg, rgba(18, 31, 62, 0.9) 0%, rgba(18, 31, 62, 0) 100%);
+        backdrop-filter: blur(8px);
+
+        .dark-mode & {
+            background: linear-gradient(1deg, rgba(170, 184, 197, 0.90) 0%, rgba(170, 184, 197, 0.00) 100%);
+        }
+    }
+}
+
+.bundles-lists-header {
+    top: -119px;
+    margin-bottom: -119px;
+    z-index: 5;
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 32px;
+        opacity: 0.5;
+        background: var(--white);
+        z-index: 1;
+    }
+
+    &__overlay-img {
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        top: auto;
+
+        @media (max-width: $screen-sm-max) {
+            width: 140px;
+            height: 140px;
+            bottom: auto;
+            top: 0;
+        }
+
+        .rtl & {
+            right: auto;
+            left: 16px;
+        }
+    }
+}
+
+
+.bundles-lists-filters {
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.5;
+        background: var(--white);
+        z-index: 1;
+    }
+
+    .bundles-lists-sort-input {
+        width: 220px;
+
+        @media (max-width: $screen-sm-max) {
+            width: 100%;
+        }
+    }
+}

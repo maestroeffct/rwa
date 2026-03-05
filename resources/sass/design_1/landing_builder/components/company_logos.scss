@@ -1,0 +1,23 @@
+@import "../../bootstrap/variables";
+
+.company-logos-section {
+    background-color: var(--section-bg);
+    border-radius: 48px;
+    padding: 48px;
+    margin-right: -48px;
+    margin-left: -48px;
+
+    &__logo-card {
+        height: 88px;
+
+        img {
+            max-height: 32px;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+

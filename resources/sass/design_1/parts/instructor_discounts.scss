@@ -1,0 +1,68 @@
+@import "../bootstrap/variables";
+
+.instructor-discount-card {
+    height: 104px;
+
+
+    &__code {
+        position: relative;
+        width: 25%;
+        height: 100%;
+        border-right: 1px dashed var(--gray-300);
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--gray);
+            right: -8px;
+        }
+
+        &:before {
+            top: -6px;
+        }
+
+        &:after {
+            bottom: -6px;
+        }
+
+        .rtl & {
+            border-right: none;
+            border-left: 1px dashed var(--gray-300);
+
+            &:before, &:after {
+                right: auto;
+                left: -6px;
+            }
+        }
+
+        @media (max-width: $screen-sm-max) {
+            width: 34%;
+        }
+    }
+
+    &__icon-svg {
+        svg {
+            width: 66px;
+            height: 66px;
+
+            @media (max-width: $screen-sm-max) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    &.user-profile-discount-card {
+        border-radius: 16px;
+        background-color: var(--gray-100);
+
+        .instructor-discount-card__code {
+            &:before, &:after {
+                background-color: var(--white);
+            }
+        }
+    }
+}

@@ -1,0 +1,224 @@
+/**
+ * Shared Toast Notification CSS
+ * Used by all themes and sections of the application
+ */
+
+:root {
+    --toast-border-radius: 12px;
+    --toast-success-color: var(--success);
+    --toast-warning-color: var(--warning);
+    --toast-danger-color: var(--danger);
+    --toast-info-color: var(--info);
+}
+
+/* Toast Container */
+
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Toast Notification */
+
+.toast-notification {
+    border-radius: var(--toast-border-radius);
+    padding: 15px;
+    margin-bottom: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-height: 80px;
+
+    &.success {
+        background-color: var(--toast-success-color);
+    }
+
+    &.warning {
+        background-color: var(--toast-warning-color);
+    }
+
+    &.danger, &.error {
+        background-color: var(--toast-danger-color);
+    }
+
+    &.info {
+        background-color: var(--toast-info-color);
+    }
+}
+
+/* Toast color variants */
+
+/* Toast Icon */
+
+.toast-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+
+/* Icon styles */
+
+.toast-icon-inner {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.success-icon {
+        color: var(--toast-success-color);
+    }
+
+    &.warning-icon {
+        color: var(--toast-warning-color);
+    }
+
+    &.danger-icon {
+        color: var(--toast-danger-color);
+    }
+
+    &.info-icon {
+        color: var(--toast-info-color);
+    }
+}
+
+/* Toast Content */
+
+.toast-content {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+
+.toast-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.toast-message {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* Close Button */
+
+.toast-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    padding: 0;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+/* Toast Progress Bar */
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+/* Toast Divider */
+
+.toast-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+    .toast-container {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        width: auto;
+    }
+
+    .toast-notification {
+        margin-bottom: 5px;
+    }
+}
+
+/* RTL Support */
+
+.rtl {
+    .toast-container {
+        right: auto;
+        left: 20px;
+    }
+
+    .toast-icon {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+
+    .toast-content {
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    .toast-close {
+        right: auto;
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rtl .toast-container {
+        right: 10px;
+        left: 10px;
+    }
+}
+
+/* jQuery Toast plugin compatibility */
+
+.jq-toast-wrap {
+    display: none !important;
+}

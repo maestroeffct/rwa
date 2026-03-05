@@ -1,0 +1,26 @@
+@import "../../bootstrap/variables";
+
+
+
+.sliding-courses-hero-section {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 64px 0 24px;
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+        padding: 24px 0;
+    }
+
+    &__upper-cta-badge-icon {
+        display: inline-block;
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+    }
+
+
+}
+

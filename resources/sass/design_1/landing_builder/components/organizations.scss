@@ -1,0 +1,15 @@
+@import "../../bootstrap/variables";
+
+.organizations-section {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 0;
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+        padding: 40px 0;
+    }
+}
+

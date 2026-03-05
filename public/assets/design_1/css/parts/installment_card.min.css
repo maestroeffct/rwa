@@ -1,0 +1,52 @@
+.installment-card__payments {
+  width: 308px;
+  height: 443px;
+  bottom: -36px;
+  margin-top: -36px;
+}
+.installment-card__payments:after, .installment-card__payments:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--white);
+  z-index: 4;
+}
+.installment-card__payments:after {
+  left: -8px;
+}
+.installment-card__payments:before {
+  right: -8px;
+}
+.installment-card__payments .divider {
+  border-top: 1px dashed var(--white);
+  opacity: 0.2;
+}
+@media (max-width: 991px) {
+  .installment-card__payments {
+    width: 100%;
+    height: auto;
+  }
+}
+.installment-card__payments-mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 16px;
+  opacity: 0.3;
+  background: var(--primary);
+  z-index: 1;
+}
+.installment-card__percent-box {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+}
+.installment-card__image {
+  width: 100%;
+  height: 120px;
+}
+.installment-card .card-progress {
+  height: 4px;
+}

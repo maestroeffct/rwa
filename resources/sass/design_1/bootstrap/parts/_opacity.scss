@@ -1,0 +1,19 @@
+$opacity: ();
+$opacity: map-merge(
+        (
+            '0':0,
+            '25':25,
+            '50':50,
+            '70':70,
+            '75':75,
+            '80':80,
+            '100':100,
+        ),
+        $opacity
+);
+
+@each $name, $val in $opacity {
+    .opacity-#{$name} {
+        opacity: #{$val / 100};
+    }
+}

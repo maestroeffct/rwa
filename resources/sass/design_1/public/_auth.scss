@@ -1,0 +1,78 @@
+.register-mobile-form-group {
+    display: block;
+    width: 100%;
+    height: 48px;
+    background-color: var(--white);
+    background-clip: padding-box;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    resize: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    .form-group-label {
+        position: absolute;
+        left: 16px;
+        top: -9.5px;
+        padding: 0 2px;
+        background-color: var(--white);
+        color: var(--gray-500);
+
+        .rtl & {
+            left: auto;
+            right: 16px;
+        }
+    }
+
+    &.is-invalid {
+        border-color: $form-feedback-invalid-color;
+        padding-right: $input-height-inner;
+        background-image: escape-svg($form-feedback-icon-invalid);
+        background-repeat: no-repeat;
+        background-position: right $input-height-inner-quarter center;
+        background-size: $input-height-inner-half $input-height-inner-half;
+    }
+
+    &__input {
+        width: 100%;
+        height: 48px;
+        background-color: transparent !important;
+        border: 0 !important;
+        padding: 0 24px !important;
+        text-align: center;
+    }
+
+    .select2-container {
+        height: 32px !important;
+        margin: 6px 0 6px 6px;
+        background-color: var(--gray-100);
+        border-radius: 8px;
+        z-index: 3;
+
+        .rtl & {
+            margin: 8px 8px 8px 0;
+        }
+
+        .select2-selection {
+            height: 36px !important;
+            min-height: 36px !important;
+            background-color: var(--gray-100);
+            border-radius: 8px !important;
+            border: none !important;
+            padding: 4px 8px !important;
+
+            .select2-selection__rendered {
+                display: flex;
+                align-items: center;
+                height: 36px !important;
+            }
+
+            .select2-selection__arrow {
+                height: 36px !important;
+            }
+        }
+    }
+}
+
+.country-code-select2-dropdown {
+    width: 242px !important;
+}

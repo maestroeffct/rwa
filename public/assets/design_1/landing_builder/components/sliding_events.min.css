@@ -1,0 +1,28 @@
+.sliding-events-section__contents {
+  height: 700px;
+  padding-top: 80px;
+}
+.sliding-events-section__contents-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+.sliding-events-section__circle-dot-separator {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  opacity: 0.5;
+  background-color: var(--white);
+}
+.sliding-events-section__circle-dot-separator:last-child {
+  display: none;
+}
+.sliding-events-section__slider-container {
+  position: relative;
+  top: -242px;
+  margin-bottom: -218px;
+  z-index: 3;
+}

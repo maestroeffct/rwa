@@ -1,0 +1,114 @@
+@keyframes up-down-single-video-section-back-image-animation {
+  0%, 100% {
+    transform: translateY(8px) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(-24px) rotate(-20deg);
+  }
+}
+.single-video-section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 664px;
+  border-radius: 48px;
+  background-color: var(--section-bg);
+  margin-left: -48px;
+  margin-right: -48px;
+  z-index: 1;
+}
+.single-video-section__video-box {
+  width: 100%;
+  height: 800px;
+  border-radius: 32px;
+}
+.single-video-section__video-box video {
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+}
+.single-video-section__back-image {
+  position: absolute;
+  bottom: -90px;
+  left: -110px;
+  width: 180px;
+  height: 210px;
+  z-index: 1;
+  animation: up-down-single-video-section-back-image-animation 4s ease-in-out infinite;
+}
+.single-video-section__back-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.rtl .single-video-section__back-image {
+  left: auto;
+  right: -110px;
+}
+.single-video-section__center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.single-video-section__revolver-icon, .single-video-section__play-button {
+  position: absolute;
+  border-radius: 50%;
+}
+.single-video-section__revolver-icon {
+  fill: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  animation: rotate-animation 14s infinite linear;
+}
+.single-video-section__play-button {
+  z-index: 3;
+}
+.single-video-section__badge {
+  position: absolute;
+  bottom: 128px;
+  right: -48px;
+  background-color: var(--primary);
+  transform: rotate(-10.975deg);
+  padding: 8px 16px;
+  border-radius: 32px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  z-index: 5;
+}
+.rtl .single-video-section__badge {
+  right: auto;
+  left: -48px;
+}
+@media (max-width: 991px) {
+  .single-video-section:after {
+    height: 464px;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .single-video-section__video-box {
+    height: 400px;
+  }
+  .single-video-section__badge {
+    bottom: -12px;
+    right: -24px;
+    font-size: 14px;
+  }
+  .rtl .single-video-section__badge {
+    right: auto;
+    left: -24px;
+  }
+  .single-video-section__back-image {
+    bottom: -80px;
+    left: -24px;
+    width: 100px;
+    height: 110px;
+  }
+  .rtl .single-video-section__back-image {
+    left: auto;
+    right: -24px;
+  }
+}

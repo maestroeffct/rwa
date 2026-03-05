@@ -1,0 +1,40 @@
+.instructor-card {
+  position: relative;
+  top: 0;
+  height: 146px;
+  transition: all 0.3s ease;
+}
+.instructor-card__rate {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.instructor-card__verified-badge {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 3;
+}
+.rtl .instructor-card__verified-badge {
+  right: auto;
+  left: 4px;
+}
+.instructor-card__mask {
+  position: absolute;
+  inset: 8px;
+  bottom: -8px;
+  border-radius: 32px;
+  opacity: 0.5;
+  background: var(--white);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.instructor-card:hover {
+  top: -8px;
+}
+.instructor-card:hover .instructor-card__mask {
+  bottom: 8px;
+  top: -8px;
+}

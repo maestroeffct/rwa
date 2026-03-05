@@ -1,0 +1,121 @@
+@import "../bootstrap/variables";
+
+.courses-lists-hero {
+    width: 100%;
+    height: 320px;
+
+    img {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__mask {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(1deg, rgba(18, 31, 62, 0.9) 0%, rgba(18, 31, 62, 0) 100%);
+        backdrop-filter: blur(8px);
+
+        .dark-mode & {
+            background: linear-gradient(1deg, rgba(170, 184, 197, 0.90) 0%, rgba(170, 184, 197, 0.00) 100%);
+        }
+    }
+}
+
+.courses-lists-header {
+    top: -119px;
+    margin-bottom: -119px;
+    z-index: 5;
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 32px;
+        opacity: 0.5;
+        background: var(--white);
+        z-index: 1;
+    }
+
+    &__overlay-img {
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        top: auto;
+
+        @media (max-width: $screen-sm-max) {
+            width: 140px;
+            height: 140px;
+            bottom: auto;
+            top: 0;
+        }
+
+        .rtl & {
+            right: auto;
+            left: 16px;
+        }
+    }
+}
+
+.courses-lists-featured {
+    height: 470px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__arrow {
+        position: absolute;
+        top: 12px;
+        right: 48px;
+        width: 59px;
+        height: 52px;
+
+        .rtl & {
+            right: auto;
+            left: 48px;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+    }
+}
+
+.courses-lists-filters {
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.5;
+        background: var(--white);
+        z-index: 1;
+    }
+
+    .courses-lists-sort-input {
+        width: 220px;
+    }
+
+    .courses-lists-card-view {
+        input {
+            visibility: hidden;
+            display: none;
+
+            &:checked {
+                & + label {
+                    color: var(--primary) !important;
+                }
+            }
+        }
+
+        label {
+            color: var(--gray-400);
+
+            &:hover {
+                background-color: var(--gray-100) !important;
+            }
+        }
+    }
+}

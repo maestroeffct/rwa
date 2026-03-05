@@ -1,0 +1,28 @@
+.search-hero {
+    width: 100%;
+    height: 382px;
+    padding-top: 130px;
+    padding-bottom: 48px;
+
+    img {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__mask {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(1deg, rgba(18, 31, 62, 0.9) 0%, rgba(18, 31, 62, 0) 100%);
+        backdrop-filter: blur(8px);
+
+        .dark-mode & {
+            background: linear-gradient(1deg, rgba(170, 184, 197, 0.90) 0%, rgba(170, 184, 197, 0.00) 100%);
+        }
+    }
+
+    &__content-anchor {
+        background: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+    }
+}

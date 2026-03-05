@@ -1,0 +1,11 @@
+.captcha-image-card {
+    height: 40px;
+
+    img {
+        width: 140px;
+
+        @media (max-width: var($screen-sm-max)) {
+            width: 84px;
+        }
+    }
+}

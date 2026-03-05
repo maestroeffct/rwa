@@ -1,0 +1,13 @@
+.store-products-section {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 54px 0;
+}
+@media (max-width: 991px) {
+  .store-products-section {
+    height: auto;
+    padding: 24px 0;
+  }
+}

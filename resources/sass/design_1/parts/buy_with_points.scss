@@ -1,0 +1,14 @@
+.buy-with-point-modal-available-points-mask {
+    position: absolute;
+    inset: 8px;
+    bottom: -8px;
+    border-radius: 16px;
+    border: 1px dashed var(--gray-200);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.buy-with-point-modal-available-points {
+    width: 312px;
+    height: 80px;
+}

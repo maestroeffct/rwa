@@ -1,0 +1,108 @@
+.featured-courses-section {
+  position: relative;
+}
+.featured-courses-section__floating-background {
+  position: absolute;
+  top: -80px;
+  left: 24px;
+  width: 226px;
+  height: 272px;
+  transform: rotate(-23.441deg);
+  z-index: 2;
+}
+.featured-courses-section__floating-background img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.rtl .featured-courses-section__floating-background {
+  left: auto;
+  right: 24px;
+}
+@media (max-width: 991px) {
+  .featured-courses-section__floating-background {
+    width: 114px;
+    height: 136px;
+    left: 0;
+  }
+  .rtl .featured-courses-section__floating-background {
+    left: auto;
+    right: 0;
+  }
+}
+.featured-courses-section__item-card {
+  height: 600px;
+}
+.featured-courses-section__item-card-overlay-image {
+  position: absolute;
+  bottom: -40px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  z-index: 3;
+}
+.featured-courses-section__item-card-overlay-image img {
+  max-height: 100%;
+}
+.rtl .featured-courses-section__item-card-overlay-image {
+  right: auto;
+  left: -80px;
+}
+@media (max-width: 991px) {
+  .featured-courses-section__item-card-overlay-image {
+    width: 88px;
+    height: 88px;
+    right: 0;
+  }
+  .rtl .featured-courses-section__item-card-overlay-image {
+    right: auto;
+    left: 0;
+  }
+}
+.featured-courses-section__item-card-course-box {
+  width: 540px;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  top: 16px;
+  z-index: 3;
+}
+.rtl .featured-courses-section__item-card-course-box {
+  left: auto;
+  right: 16px;
+}
+.featured-courses-section__item-card-course-box-description {
+  max-height: 315px;
+  overflow: hidden;
+}
+.featured-courses-section__item-card-slider-navigation {
+  position: absolute;
+  top: 30% !important;
+  width: 48px !important;
+  height: 48px !important;
+}
+.featured-courses-section__item-card-slider-navigation.swiper-button-next {
+  right: 38px !important;
+}
+.featured-courses-section__item-card-slider-navigation.swiper-button-prev {
+  left: 38px !important;
+}
+.featured-courses-section__item-card-slider-navigation:after {
+  display: none !important;
+}
+@media (max-width: 991px) {
+  .featured-courses-section__item-card {
+    height: 400px;
+  }
+  .featured-courses-section__item-card-course-box {
+    width: auto;
+    right: 16px;
+  }
+  .rtl .featured-courses-section__item-card-course-box {
+    left: 16px;
+    right: 16px;
+  }
+  .featured-courses-section__item-card-course-box-description {
+    max-height: 142px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,46 @@
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--gray);
+}
+
+.panel-content {
+    width: calc(100vw - 258px);
+
+    &__scrollable {
+        height: calc(100vh - 122px);
+    }
+
+    @media (max-width: $screen-sm-max) {
+        width: 100vw;
+    }
+}
+
+.panel-title-and-breadcrumb {
+    height: 52px;
+}
+
+.panel-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 258px);
+    z-index: 5;
+
+    @media (max-width: $screen-sm-max) {
+        width: 100%;
+    }
+}
+
+.gift-received-modal {
+
+    &__sender-avatar {
+        position: absolute;
+        right: 4px;
+        bottom: -4px;
+        z-index: 2;
+    }
+}

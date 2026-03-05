@@ -1,0 +1,15 @@
+@import "../bootstrap/variables";
+
+.btn.btn-xlg {
+    min-height: 64px !important;
+    height: 64px !important;
+    padding: 20px 28px;
+    border-radius: 20px;
+
+    @media (max-width: $screen-sm-max) {
+        height: 48px !important;
+        min-height: 48px !important;
+        padding: 14px 20px;
+        border-radius: 8px;
+    }
+}

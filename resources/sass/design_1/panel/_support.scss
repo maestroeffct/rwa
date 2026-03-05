@@ -1,0 +1,54 @@
+.conversation-search-box {
+    position: relative;
+    height: 48px;
+}
+
+.support-conversation-item {
+    &.active, &:hover {
+        position: relative;
+        background-color: var(--gray-100);
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 2px;
+            height: 70%;
+            background-color: var(--primary);
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.support-conversation-card {
+    position: relative;
+    height: calc(100vh - 315px);
+    overflow-y: auto;
+    padding-bottom: 44px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        border-radius: 0 0 16px 16px;
+        background: linear-gradient(1deg, #FFF 0.92%, rgba(255, 255, 255, 0.00) 107.31%);
+
+        .dark-mode & {
+            background: linear-gradient(1deg, #1E1F26 0.92%, rgba(30, 31, 38, 0.00) 107.31%);
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        height: 450px;
+    }
+}
+
+.support-conversation-messages {
+    position: relative;
+    height: calc(100vh - 404px);
+    padding-bottom: 44px;
+}

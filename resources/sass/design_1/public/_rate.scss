@@ -1,0 +1,33 @@
+.stars-card {
+    min-height: 20px;
+
+    &__item {
+        display: flex;
+        margin-right: 2px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .rtl & {
+            margin-right: 0;
+            margin-left: 2px;
+
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+
+        svg {
+            stroke: var(--gray-400);
+            fill: var(--gray-400);
+        }
+
+        &.active {
+            svg {
+                stroke: $warning;
+                fill: $warning;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.events-calendar {
+
+    &__upcoming-event-date-box {
+        width: 48px;
+        min-width: 48px;
+        height: 52px;
+    }
+}
+
+.has-event {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 8px;
+        height: 8px;
+        background-color: var(--primary);
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .rtl &:after {
+        right: auto;
+        left: 6px;
+    }
+}

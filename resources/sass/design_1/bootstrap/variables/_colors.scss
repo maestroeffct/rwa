@@ -1,0 +1,83 @@
+$gray-100: #FAFCFF;
+$gray-200: #F0F4F9;
+$gray-300: #E9EDF3;
+$gray-400: #CDD5E2;
+$gray-500: #97A7BF;
+$gray: #F5F8F9;
+$black: #000;
+$white: #ffffff;
+
+$primary: #0170FF;
+$primary-saturated: #67A9FF;
+$secondary: #0E2145;
+$accent: #FF7043;
+$success: #43D477;
+$info: #7EB2FF;
+$warning: #FFA200;
+$danger: #F63C3C;
+$dark: #121F3E;
+$yellow: #FFDC5D;
+$badge: #E94560;
+$badge_counter: #E94560;
+$orange: #F2994A;
+$whatsapp: #43D477;
+$twitter: #1DA1F2;
+$telegram: #08C;
+$facebook: #1877F2;
+$linkedin: #1F62C9;
+$section_bg: #EAF0F3;
+
+$white-gradient: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+
+$body-bg: $white !default;
+$body-color: var(--dark);
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $black !default;
+$yiq-text-light: $white !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 250 !default;
+
+
+$theme-colors: ();
+$theme-colors: map-merge(
+        (
+            "gray-100" : $gray-100,
+            "gray-200" : $gray-200,
+            "gray-300" : $gray-300,
+            "gray-400" : $gray-400,
+            "gray-500" : $gray-500,
+            "gray" : $gray,
+            "primary" : $primary,
+            "primary-saturated" : $primary-saturated,
+            "secondary" : $secondary,
+            "accent" : $accent,
+            "danger" : $danger,
+            "success" : $success,
+            "info" : $info,
+            "warning" : $warning,
+            "orange" : $orange,
+            "yellow" : $yellow,
+            "white" : $white,
+            "black" : $black,
+            "dark" : $dark,
+            "badge" : $badge,
+            "badge-counter" : $badge_counter,
+            "section-bg" : $section_bg,
+        ),
+        $theme-colors
+);
+
+
+$socialColors: ();
+$socialColors: map-merge(
+        (
+            "whatsapp" : $whatsapp,
+            "twitter" : $twitter,
+            "telegram" : $telegram,
+            "facebook" : $facebook,
+            "linkedin" : $linkedin,
+        ),
+        $socialColors
+);

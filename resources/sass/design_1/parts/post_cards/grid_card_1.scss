@@ -1,0 +1,41 @@
+.post-card {
+
+    &__image {
+        height: 230px;
+    }
+
+    &__badges {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 124;
+
+        .rtl & {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    &__body {
+        margin-top: -46px;
+    }
+
+    &__title {
+        max-height: 42px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__mask {
+        position: absolute;
+        top: 12px;
+        left: 24px;
+        right: 24px;
+        bottom: -12px;
+        border-radius: 16px;
+        border: 1px solid var(--gray-200);
+        opacity: 0.5;
+        background: var(--white);
+        z-index: 1;
+    }
+}

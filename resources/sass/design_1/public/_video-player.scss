@@ -1,0 +1,14 @@
+.video-js {
+    width: 100% !important;
+    border-radius: 16px;
+
+    iframe, .vjs-poster, video {
+        border-radius: 16px;
+    }
+
+    .vjs-big-play-button {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+    }
+}

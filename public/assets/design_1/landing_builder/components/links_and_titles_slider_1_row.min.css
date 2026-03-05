@@ -1,0 +1,43 @@
+.links-and-titles-slider-1-row-section {
+  position: relative;
+}
+.links-and-titles-slider-1-row-section .marquee-swiper {
+  transition-timing-function: linear;
+  align-items: center;
+  height: 93px;
+  width: 100%;
+}
+.links-and-titles-slider-1-row-section .marquee-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.links-and-titles-slider-1-row-section .marquee-swiper .swiper-slide .marquee-item {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+}
+.links-and-titles-slider-1-row-section .marquee-swiper .swiper-slide .tape-separator-icon {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 991px) {
+  .links-and-titles-slider-1-row-section .marquee-swiper .swiper-slide {
+    gap: 20px;
+  }
+  .links-and-titles-slider-1-row-section .marquee-swiper .swiper-slide .marquee-item {
+    font-size: 16px;
+  }
+}
+.links-and-titles-slider-1-row-section .marquee-swiper.primary-tape {
+  background-color: var(--primary);
+}
+.links-and-titles-slider-1-row-section .marquee-swiper.secondary-tape {
+  background-color: var(--secondary);
+}
+.links-and-titles-slider-1-row-section.taps-with-rotate .marquee-swiper {
+  transform: rotate(-3deg);
+}

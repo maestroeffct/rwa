@@ -1,0 +1,72 @@
+@import "../../bootstrap/variables";
+
+.upcoming-course-card {
+
+    &__image {
+        width: 100%;
+        height: 384px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 128px;
+            border-radius: 0 0 16px 16px;
+            background: linear-gradient(1deg, rgba(18, 31, 62, 0.9) 0%, rgba(18, 31, 62, 0) 100%);
+            transition: all 0.3s ease;
+            z-index: 1;
+
+            .dark-mode & {
+                background: linear-gradient(1deg, rgba(170, 184, 197, 0.90) 0%, rgba(170, 184, 197, 0.00) 100%);
+            }
+        }
+
+        .bottom-content {
+            position: absolute;
+            bottom: 52px;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: 324px;
+        }
+    }
+
+    &:hover &__image:after {
+        height: 304px;
+    }
+
+    &__body {
+        margin-bottom: -36px;
+    }
+
+    &__title {
+        max-height: 42px;
+        font-weight: 700;
+        line-height: 21px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__content {
+        position: relative;
+        top: -36px;
+        height: 108px;
+        z-index: 1;
+    }
+
+    .is-live-course-icon {
+        position: absolute;
+        top: 114px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 4px solid var(--white);
+        background-color: rgba(255, 255, 255, 0.30);
+        backdrop-filter: blur(5px);
+        z-index: 2;
+    }
+}

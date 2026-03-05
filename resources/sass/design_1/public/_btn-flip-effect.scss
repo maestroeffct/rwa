@@ -1,0 +1,129 @@
+
+.btn-flip-effect {
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+        transition: opacity .2s, transform .2s;
+        transition-timing-function: cubic-bezier(.455, .03, .515, .955);
+    }
+
+    &:after {
+        content: attr(data-text);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: calc(50% - 16px);
+        opacity: 0;
+        transform: translate(50%, 100%);
+        transition: opacity .2s, transform .2s;
+        transition-timing-function: cubic-bezier(.455, .03, .515, .955);
+        white-space: nowrap;
+        color: var(--white);
+    }
+
+    .rtl &:after {
+        right: auto;
+        left: calc(50% - 16px);
+        transform: translate(-50%, 100%);
+    }
+
+    &__slow-effect &__text, &__slow-effect:after {
+        transition: opacity .4s, transform .4s;
+    }
+
+    &.with-icon-48:after {
+        right: calc(50% - 20px);
+
+        .rtl & {
+            right: auto;
+            left: calc(50% - 20px);
+        }
+    }
+
+    &.btn-flip-effect__left-side:after {
+        right: auto;
+        left: calc(50% - 16px);
+        transform: translate(-50%, 100%);
+
+        .rtl & {
+            left: auto;
+            right: calc(50% - 16px);
+            transform: translate(50%, 100%);
+        }
+    }
+
+
+    &.btn-flip-effect__no-side:after {
+        right: auto;
+        left: auto;
+        transform: translate(0, 100%);
+    }
+
+    &.btn-flip-effect__right-0:after {
+        right: calc(50% - 14px);
+
+        .rtl & {
+            right: auto;
+            left: calc(50% - 14px);
+        }
+    }
+
+    &.btn-flip-effect__left-0:after {
+        left: calc(50% - 14px);
+
+        .rtl & {
+            left: auto;
+            right: calc(50% - 14px);
+        }
+    }
+
+    &.btn-flip-effect__left-minus-54:after {
+        left: calc(-54% - 14px);
+
+        .rtl & {
+            left: auto;
+            right: calc(-54% - 14px);
+        }
+    }
+
+    &.btn-flip-effect__text-black:after {
+        color: var(--black);
+    }
+
+    &.btn-flip-effect__text-dark:after {
+        color: var(--dark);
+    }
+
+    &.btn-flip-effect__text-primary:after {
+        color: var(--primary);
+    }
+
+    &:hover &__text {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+
+    &:hover {
+        &:after {
+            transform: translate(50%, -50%);
+            opacity: 1;
+
+            .rtl & {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &.btn-flip-effect__no-side:after {
+            transform: translate(0%, -50%);
+        }
+
+        &.btn-flip-effect__left-side:after {
+            transform: translate(-50%, -50%);
+
+            .rtl & {
+                transform: translate(50%, -50%);
+            }
+        }
+    }
+}

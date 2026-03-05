@@ -1,0 +1,65 @@
+@import "../../bootstrap/variables";
+
+.statistics-section {
+    position: relative;
+    height: 192px;
+    margin-right: -48px;
+    margin-left: -48px;
+
+    @media (max-width: $screen-sm-max) {
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    &__mask {
+        position: absolute;
+        inset: 16px 16px -16px -16px;
+        border-radius: 48px;
+        border: 1px solid var(--gray-300);
+        z-index: 1;
+    }
+
+    &__contents {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 60px 48px;
+        border-radius: 32px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .statistic-col {
+        @media (max-width: $screen-sm-max) {
+            &:nth-child(n+3) {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    &__counter-value {
+        transition: all 0.3s ease;
+    }
+
+    &__icon-1 {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+
+    &__icon-2 {
+        background-color: var(--success);
+        color: var(--white);
+    }
+
+    &__icon-3 {
+        background-color: #EE5A59;
+        color: var(--white);
+    }
+
+    &__icon-4 {
+        background-color: #FFA200;
+        color: var(--white);
+    }
+}
+

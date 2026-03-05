@@ -1,0 +1,51 @@
+.organization-card {
+    min-height: 272px;
+    top: 0;
+    transition: all 0.3s ease;
+
+    &__rate {
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    &__mask {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 32px;
+        opacity: 0.5;
+        background: var(--white);
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    &__verified-badge {
+        position: absolute;
+        right: 2px;
+        bottom: 2px;
+        z-index: 3;
+
+        .rtl & {
+            right: auto;
+            left: 2px;
+        }
+    }
+
+    &:hover {
+        top: -8px;
+
+        .organization-card__mask {
+            bottom: 8px;
+            top: -8px;
+        }
+    }
+
+    &.no-card-mask {
+        .organization-card__mask {
+            display: none;
+        }
+    }
+}

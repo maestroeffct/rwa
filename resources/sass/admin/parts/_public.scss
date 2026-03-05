@@ -1,0 +1,83 @@
+
+.card-with-mask {
+    position: relative;
+
+    .mask-8-white {
+        position: absolute;
+        inset: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.5;
+        background: var(--white);
+    }
+}
+
+.close-icon {
+    transform: rotate(-45deg);
+}
+
+.form-control {
+    height: 48px !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--gray-300) !important;
+    background-color: var(--white) !important;
+}
+
+textarea.form-control {
+    height: auto !important;
+}
+
+.btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 41px !important;
+    min-height: 41px !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+}
+
+.btn-sm {
+    height: 35px !important;
+    min-height: 35px !important;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 8px;
+}
+
+.btn-lg {
+    height: 48px !important;
+    min-height: 48px !important;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+
+.btn-xlg {
+    height: 61px !important;
+    min-height: 61px !important;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-right: 28px;
+    padding-left: 28px;
+    border-radius: 8px;
+}
+
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

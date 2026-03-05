@@ -1,0 +1,73 @@
+@import "../bootstrap/variables";
+
+
+.become-instructor-wizard {
+
+    &__mask {
+        position: absolute;
+        top: -32px;
+        bottom: -32px;
+        right: -32px;
+        left: calc(50% - 52px);
+        border-radius: 48px;
+        z-index: -1;
+
+        .rtl & {
+            left: -32px;
+            right: calc(50% - 52px);
+        }
+    }
+
+    &__form-card {
+        height: 630px;
+        overflow-y: auto;
+    }
+
+    &__images-card {
+        position: relative;
+        height: 630px;
+        width: 100%;
+
+        .wizard-overlay-image {
+            position: absolute;
+            bottom: 48px;
+            right: -100px;
+            width: 200px;
+            height: 200px;
+            z-index: 2;
+
+            .rtl & {
+                right: auto;
+                left: -100px;
+            }
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: 480px;
+
+            .wizard-overlay-image {
+                right: -24px;
+                width: 100px;
+                height: 100px;
+
+                .rtl & {
+                    right: auto;
+                    left: -24px;
+                }
+            }
+        }
+    }
+
+    &__progress {
+
+        &, & .progressbar {
+            height: 4px;
+        }
+    }
+
+    &__week-day {
+        label {
+            border: 1px solid var(--gray-400) !important;
+        }
+    }
+}

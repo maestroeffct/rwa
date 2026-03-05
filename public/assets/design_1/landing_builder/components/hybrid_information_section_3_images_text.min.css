@@ -1,0 +1,73 @@
+.hybrid-information-section-3-images_text-section {
+  width: 100%;
+}
+.hybrid-information-section-3-images_text-section__image-1, .hybrid-information-section-3-images_text-section__image-2 {
+  position: relative;
+  width: 280px;
+  height: 576px;
+}
+@media (max-width: 991px) {
+  .hybrid-information-section-3-images_text-section__image-1, .hybrid-information-section-3-images_text-section__image-2 {
+    width: 50%;
+    height: 320px;
+  }
+}
+.hybrid-information-section-3-images_text-section__image-1 {
+  top: -32px;
+  margin-bottom: -32px;
+}
+.hybrid-information-section-3-images_text-section__overlay-image {
+  position: absolute;
+  top: 30%;
+  left: -66px;
+  width: 132px;
+  height: 132px;
+  animation: rotate-animation 12s infinite linear;
+}
+.hybrid-information-section-3-images_text-section__overlay-image, .hybrid-information-section-3-images_text-section__overlay-image img {
+  border-radius: 50%;
+}
+.hybrid-information-section-3-images_text-section__overlay-image img {
+  fill: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.rtl .hybrid-information-section-3-images_text-section__overlay-image {
+  left: auto;
+  right: -66px;
+}
+@media (max-width: 991px) {
+  .hybrid-information-section-3-images_text-section__overlay-image {
+    top: auto;
+    bottom: 0;
+    left: -24px;
+    width: 96px;
+    height: 96px;
+  }
+  .rtl .hybrid-information-section-3-images_text-section__overlay-image {
+    left: auto;
+    right: -24px;
+  }
+}
+.hybrid-information-section-3-images_text-section__badge {
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  transform: rotate(20deg);
+  padding: 8px 16px;
+  z-index: 2;
+}
+.rtl .hybrid-information-section-3-images_text-section__badge {
+  right: auto;
+  left: 8px;
+}
+@media (max-width: 991px) {
+  .hybrid-information-section-3-images_text-section__badge {
+    top: -16px;
+  }
+}
+.hybrid-information-section-3-images_text-section__statistic-item .line {
+  width: 2px;
+  height: 20px;
+  background-color: var(--primary);
+}

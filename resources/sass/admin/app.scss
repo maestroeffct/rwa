@@ -1,0 +1,43 @@
+@import "../design_1/bootstrap/function";
+@import "../design_1/bootstrap/variables";
+@import "../design_1/bootstrap/mixins";
+
+@import "../design_1/bootstrap/parts/root";
+@import "../design_1/bootstrap/parts/font-size";
+@import "../design_1/bootstrap/parts/font-weight";
+@import "../design_1/bootstrap/parts/spacing";
+@import "../design_1/bootstrap/parts/border-radius";
+@import "../design_1/bootstrap/parts/border";
+@import "../design_1/bootstrap/parts/bg-color";
+@import "../design_1/bootstrap/parts/text-color";
+@import "../design_1/bootstrap/parts/sizing";
+@import "../design_1/bootstrap/parts/display-grid";
+@import "../design_1/bootstrap/parts/badge";
+@import "../design_1/bootstrap/parts/position";
+@import "../design_1/bootstrap/parts/modal";
+
+/* For Header */
+@import "../design_1/public/language_select";
+@import "../design_1/public/top-navbar";
+@import "../design_1/parts/advertising_modals";
+
+// Toast
+@import "../design_1/public/toast";
+@import "../design_1/public/sweetalert2";
+@import "../design_1/public/lists";
+
+/*  Parts */
+@import "parts/reset";
+@import "parts/public";
+@import "parts/select2";
+@import "parts/files_manager";
+@import "parts/card-statistics";
+@import "parts/tables";
+@import "parts/forms";
+@import "parts/accordion";
+@import "parts/landing_builder_admin_side";
+@import "parts/auth-pages";
+@import "parts/dropdown";
+@import "parts/theme";
+@import "parts/header";
+

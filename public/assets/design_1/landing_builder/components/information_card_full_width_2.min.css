@@ -1,0 +1,16 @@
+.information-card-full-width-2-section__main-img {
+  width: 100%;
+  height: 672px;
+  overflow: hidden;
+}
+.information-card-full-width-2-section__main-img img {
+  transition: all 0.45s ease;
+}
+.information-card-full-width-2-section__main-img:hover img {
+  transform: scale(1.1);
+}
+@media (max-width: 991px) {
+  .information-card-full-width-2-section__main-img {
+    height: 480px;
+  }
+}

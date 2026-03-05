@@ -1,0 +1,61 @@
+.banners-grid-3-in-different-sizes-section .banner-bottom-contents {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  border-radius: 0 0 32px 32px;
+  transition: all 0.6s ease-in-out;
+}
+.banners-grid-3-in-different-sizes-section .banner-bottom-contents:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0 0 32px 32px;
+  transition: all 0.4s ease-in-out;
+  background: linear-gradient(0deg, #000 0.34%, rgba(0, 0, 0, 0) 99.89%);
+  opacity: 0.8;
+}
+.dark-mode .banners-grid-3-in-different-sizes-section .banner-bottom-contents:after {
+  background: linear-gradient(0deg, #E1EAF6 0.34%, rgba(225, 234, 246, 0) 99.89%);
+}
+.banners-grid-3-in-different-sizes-section__banner-1, .banners-grid-3-in-different-sizes-section__banner-2, .banners-grid-3-in-different-sizes-section__banner-3 {
+  overflow: hidden;
+}
+.banners-grid-3-in-different-sizes-section__banner-1 img, .banners-grid-3-in-different-sizes-section__banner-2 img, .banners-grid-3-in-different-sizes-section__banner-3 img {
+  transition: all 0.4s ease-in-out;
+}
+.banners-grid-3-in-different-sizes-section__banner-1:hover img, .banners-grid-3-in-different-sizes-section__banner-2:hover img, .banners-grid-3-in-different-sizes-section__banner-3:hover img {
+  transform: scale(1.04);
+}
+.banners-grid-3-in-different-sizes-section__banner-1 {
+  width: 100%;
+  height: 672px;
+}
+.banners-grid-3-in-different-sizes-section__banner-2 {
+  width: 100%;
+  height: 324px;
+}
+.banners-grid-3-in-different-sizes-section__banner-3 {
+  width: 100%;
+  height: 324px;
+}
+.banners-grid-3-in-different-sizes-section__cta-section {
+  width: 100%;
+  height: 324px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banners-grid-3-in-different-sizes-section__cta-section-arrow-icon {
+  transition: all 0.3s ease;
+}
+.banners-grid-3-in-different-sizes-section__cta-section:hover .banners-grid-3-in-different-sizes-section__cta-section-arrow-icon {
+  transform: rotate(45deg);
+}
+@media (max-width: 991px) {
+  .banners-grid-3-in-different-sizes-section__banner-1 {
+    width: 100%;
+    height: 324px;
+  }
+}

@@ -1,0 +1,35 @@
+$textColors: ();
+$textColors: map-merge(
+        (
+            "gray-300" : 'gray-300',
+            "gray-400" : 'gray-400',
+            "gray-500" : 'gray-500',
+            "gray" : 'gray',
+            "white" : 'white',
+            "primary" : 'primary',
+            "secondary" : 'secondary',
+            "black" : 'black',
+            "dark" : 'dark',
+            "accent" : 'accent',
+            "success" : "success",
+            "info" : "info",
+            "warning" : "warning",
+            "danger" : "danger",
+            "yellow" : "yellow",
+            "badge" : "badge",
+            "orange" : "orange",
+        ),
+        $textColors
+);
+
+@each $text, $color in $textColors {
+    .text-#{$text} {
+        color: var(--#{$color}) !important;
+    }
+
+    .text-hover-#{$text} {
+        &:hover {
+            color: var(--#{$color}) !important;
+        }
+    }
+}

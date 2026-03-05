@@ -1,0 +1,103 @@
+@import "../../bootstrap/variables";
+
+.multi-tab-image-video-section {
+
+
+    &__content-box {
+        width: 100%;
+        height: 700px;
+
+        &, & img, & video {
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+        }
+
+        .plyr {
+            height: 100%;
+            border-radius: 16px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: 380px;
+        }
+    }
+
+    &__content-video-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.30);
+        border: 12px solid var(--white);
+        backdrop-filter: blur(4px);
+        transition: all .4s ease;
+
+        .dark-mode & {
+            background-color: rgba(30, 31, 38, 0.3);
+        }
+    }
+
+    &__content-background {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        left: -20px;
+        height: 772px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 32px;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(50px);
+
+        @media (max-width: $screen-sm-max) {
+            height: 438px;
+        }
+    }
+
+    &__content-tabs {
+        width: 100%;
+
+        &.has-more-then-four-item {
+            overflow-x: auto;
+            padding-bottom: 10px;
+
+            .d-grid {
+                grid-auto-flow: column;
+                grid-auto-columns: 23.5%;
+
+                @media (max-width: $screen-sm-max) {
+                    grid-auto-columns: 44%;
+                }
+            }
+        }
+
+        &.less-then-four-item {
+            .d-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            @media (max-width: $screen-sm-max) {
+                overflow-x: auto;
+                padding-bottom: 10px;
+
+                .d-grid {
+                    grid-template-columns: none;
+                    grid-auto-flow: column;
+                    grid-auto-columns: 44%;
+                }
+            }
+        }
+
+        &-item {
+            color: var(--dark);
+            border: 1px solid var(--gray-200);
+
+            &:hover, &.active {
+                color: var(--primary);
+                border: 1px solid var(--primary);
+            }
+        }
+    }
+
+}

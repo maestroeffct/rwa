@@ -1,0 +1,89 @@
+@import "../bootstrap/variables";
+
+.panel-sidebar {
+    width: 258px;
+
+    &__user-avatar {
+        border: 4px solid var(--gray);
+    }
+
+    &__contents {
+        width: 100%;
+        height: calc(100vh - 58px);
+
+        &.without-bottom-image {
+            height: calc(100vh - 70px);
+        }
+
+        @media (max-width: $screen-sm-max) {
+            height: calc(100vh - 110px);
+        }
+    }
+
+    &__bottom-banner {
+        width: 100%;
+        height: 208px;
+        padding: 24px;
+    }
+
+    &__item-spacing {
+        padding-left: 32px;
+        padding-right: 20px;
+
+        .rtl & {
+            padding-left: 20px;
+            padding-right: 32px;
+        }
+    }
+
+    &__menu,
+    &__menu-item {
+        height: 40px;
+
+        &:hover {
+            background-color: var(--gray-100);
+        }
+    }
+
+    &__panel-user-menu,
+    &__panel-user-menu-item {
+        height: 48px;
+
+        &:hover {
+            background-color: var(--gray-100);
+        }
+    }
+
+    &__menu-item {
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: 1px solid var(--gray-300);
+            margin-right: 14px;
+
+            .rtl & {
+                margin-right: 0;
+                margin-left: 14px;
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        position: fixed;
+        top: 110%;
+        width: 100%;
+        background-color: var(--white);
+        z-index: 570;
+        padding: 40px 20px 0 !important;
+        transition: top 0.4s cubic-bezier(0.43, 0.83, 0.54, 1.02),
+            opacity 0.4s linear;
+
+        &.show-sidebar {
+            top: 70px;
+        }
+    }
+}

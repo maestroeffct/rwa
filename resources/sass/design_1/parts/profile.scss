@@ -1,0 +1,176 @@
+@import "../bootstrap/variables";
+
+.profile-cover-card {
+    position: relative;
+    height: 320px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(1deg, rgba(18, 31, 62, 0.9) 0%, rgba(18, 31, 62, 0) 100%);
+        backdrop-filter: blur(8px);
+        z-index: 1;
+
+        .dark-mode & {
+            background: linear-gradient(1deg, rgba(170, 184, 197, 0.90) 0%, rgba(170, 184, 197, 0.00) 100%);
+        }
+    }
+}
+
+.profile-container {
+    position: relative;
+    margin-top: -169px;
+    z-index: 3;
+}
+
+.profile-card-has-mask {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: -8px;
+        border-radius: 24px;
+        opacity: 0.5;
+        background-color: var(--white);
+        z-index: -1;
+    }
+}
+
+.profile-tabs-items {
+    @media (max-width: $screen-sm-max) {
+        overflow-x: auto;
+
+        .navbar-item {
+            min-width: max-content;
+        }
+    }
+}
+
+.profile-avatar-card {
+    position: relative;
+
+    img {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-color: var(--gray-200);
+        z-index: 1;
+    }
+
+    &.size-64:after {
+        width: 80px;
+        height: 80px;
+        background-color: var(--gray-100);
+    }
+
+    &__verified-badge {
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        z-index: 3;
+
+        .rtl & {
+            right: auto;
+            left: 4px;
+        }
+    }
+}
+
+.profile-followers-card {
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1px;
+        height: 16px;
+        background-color: var(--gray-300);
+    }
+}
+
+.profile-video-card {
+    height: 260px;
+
+    &, & video {
+        border-radius: 16px;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.profile-education-card {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 40px;
+        width: 3px;
+        height: 16px;
+        border-left: 1px dashed var(--gray-300);
+        z-index: 1;
+    }
+
+    &:last-child:after {
+        display: none;
+    }
+}
+
+.profile-badge-card {
+    height: 199px;
+
+    &__mask {
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        right: 4px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.5;
+        background-color: var(--white);
+        border: 1px solid var(--gray-200);
+        z-index: 1;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        height: 182px;
+    }
+}
+
+
+.profile-instructor-card {
+
+    &__mask {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: -8px;
+        border-radius: 16px;
+        opacity: 0.5;
+        background-color: var(--white);
+        border: 1px solid var(--gray-200);
+        z-index: 1;
+    }
+}

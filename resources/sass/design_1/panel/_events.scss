@@ -1,0 +1,45 @@
+.sold-tickets-event-card {
+    &__mask {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: -8px;
+        bottom: -8px;
+        border-radius: 24px;
+        border: 1px dashed var(--gray-300);
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 2px;
+        height: 40px;
+        background-color: var(--primary);
+        transform: translateY(-50%);
+        z-index: 4;
+    }
+}
+
+/* organization event */
+.organization-event-card {
+    width: 100%;
+    height: 420px;
+
+    &__contents {
+        position: absolute;
+        min-height: 192px;
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        z-index: 3;
+
+        &-title {
+            max-height: 42px;
+            overflow: hidden;
+        }
+    }
+}

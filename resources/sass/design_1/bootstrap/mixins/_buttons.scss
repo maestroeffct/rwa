@@ -1,0 +1,49 @@
+@mixin button-variant($color) {
+    color: var(--#{$color}-btn-color);
+    background-color: var(--#{$color});
+    border-color: var(--#{$color}-border);
+    box-shadow: var(--#{$color}-btn-shadow);
+
+    &:hover, &:active, &:focus, &:not(:disabled):not(.disabled):active {
+        color: var(--#{$color}-btn-hover-color);
+        background-color: var(--#{$color}-hover);
+        border-color: var(--#{$color}-hover-border);
+        box-shadow: var(--#{$color}-btn-hover-shadow);
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled, &:disabled {
+        color: var(--#{$color}-btn-color);
+        background-color: var(--#{$color});
+        border-color: var(--#{$color}-border);
+    }
+}
+
+
+@mixin button-outline-variant($color) {
+    color: var(--#{$color});
+    border-color: var(--#{$color});
+    border-width: $outline-btn-border-width;
+
+    &:hover {
+        color: var(--#{$color}-btn-color);
+        background-color: var(--#{$color});
+        border-color: var(--#{$color});
+    }
+
+    &.disabled,
+    &:disabled {
+        color: var(--#{$color});
+        background-color: transparent;
+    }
+}
+
+@mixin button-size($height, $padding-x, $font-size, $font-weight, $border-radius) {
+    height: $height;
+    min-height: $height;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    border-radius: 8px;
+}

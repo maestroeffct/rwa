@@ -1,0 +1,51 @@
+.note-editor {
+    border-radius: $input-border-radius;
+
+    .note-editable {
+        background-color: var(--gray) !important;
+
+
+        ul {
+            list-style: disc !important;
+            list-style-position: inside !important;
+
+            li {
+                list-style: inherit !important;
+            }
+        }
+
+        ol {
+            list-style: decimal !important;
+            list-style-position: inside !important;
+
+            li {
+                list-style: inherit !important;
+            }
+        }
+
+    }
+
+    .note-toolbar {
+        background-color: var(--gray) !important;
+        padding: 12px 40px 5px 5px !important;
+        border-bottom: 1px solid rgba(52, 52, 52, .125);
+        border-radius: $input-border-radius $input-border-radius 0 0;
+
+        .rtl & {
+            padding: 12px 5px 5px 40px !important;
+        }
+
+        .note-btn-group {
+            position: relative;
+            display: inline-flex;
+            vertical-align: middle;
+        }
+    }
+}
+
+.bg-white-editor {
+
+    .note-editable, .note-toolbar {
+        background-color: var(--white) !important;
+    }
+}

@@ -1,0 +1,58 @@
+.admin-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 250px;
+    height: 100px;
+    transition: all .5s ease;
+
+    .sidebar-mini & {
+        left: 65px;
+    }
+
+    &__badge-counter {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        min-width: 16px;
+        min-height: 16px;
+    }
+
+    &__item-divider {
+        width: 1px;
+        height: 24px;
+        opacity: 0.2;
+        background-color: var(--white);
+    }
+
+    .language-dropdown {
+        left: auto !important;
+        right: 0 !important;
+    }
+
+    .rtl & {
+        left: 0;
+        right: 250px;
+
+        .language-dropdown {
+            left: 0 !important;
+            right: auto !important;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        left: 0;
+
+        .rtl & {
+            left: 0;
+            right: 0;
+        }
+
+        .language-dropdown {
+            left: auto !important;
+            right: -88px !important;
+        }
+    }
+
+}
+

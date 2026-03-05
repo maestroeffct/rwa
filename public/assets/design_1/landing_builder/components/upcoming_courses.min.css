@@ -1,0 +1,18 @@
+.upcoming-courses-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--section-bg);
+  border-radius: 48px;
+  padding: 60px 48px;
+  margin-right: -48px;
+  margin-left: -48px;
+}
+@media (max-width: 991px) {
+  .upcoming-courses-section {
+    height: auto;
+    padding: 48px 24px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

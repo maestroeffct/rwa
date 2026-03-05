@@ -1,0 +1,129 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    color: $body-color;
+    text-decoration: if($link-decoration == none, null, none);
+    white-space: $btn-white-space;
+    user-select: none;
+    background-color: transparent;
+    border: $btn-border-width solid transparent;
+    transition: $btn-transition;
+
+    @include button-size($md-btn-height, $md-btn-padding-x, $btn-font-size, $btn-font-weight, $btn-border-radius);
+
+    @include hover() {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        @include box-shadow($btn-focus-box-shadow);
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+
+        &:active,
+        &.active {
+            @include box-shadow($btn-active-box-shadow);
+
+            &:focus {
+                @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+            }
+        }
+    }
+}
+
+
+@each $color, $var in $button-colors {
+    .btn-#{$color} {
+        @include button-variant($color);
+    }
+}
+
+@each $color, $var in $button-colors {
+    .btn-outline-#{$color} {
+        @include button-outline-variant($color);
+    }
+}
+
+
+.btn-sm {
+    @include button-size($sm-btn-height, $sm-btn-padding-x, $sm-btn-font-size, $sm-btn-font-weight, $sm-btn-border-radius);
+}
+
+.btn-lg {
+    @include button-size($lg-btn-height, $lg-btn-padding-x, $lg-btn-font-size, $lg-btn-font-weight, $lg-btn-border-radius);
+}
+
+.btn-xlg {
+    @include button-size($xlg-btn-height, $xlg-btn-padding-x, $xlg-btn-font-size, $xlg-btn-font-weight, $xlg-btn-border-radius);
+}
+
+.btn-53 {
+    @include button-size(53px, $lg-btn-padding-x, $lg-btn-font-size, $lg-btn-font-weight, $lg-btn-border-radius);
+}
+
+.btn-block {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+
+.btn-sm-block {
+    @media (max-width: $screen-sm-max) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    border: 0;
+}
+
+button {
+    font-family: $font-family-base;
+    font-weight: $font-weight-400;
+    font-stretch: unset;
+    font-size: $font-size-base;
+    cursor: pointer;
+}
+
+.btn-outline-gray-500 {
+    color: var(--gray-500);
+    background-color: var(--white);
+    border-color: var(--gray-500);
+
+    &:hover, &:active, &:focus, &:not(:disabled):not(.disabled):active {
+        color: var(--gray);
+        background-color: var(--gray-500);
+        border-color: var(--gray-500);
+    }
+}
+
+.btn-gray {
+    color: var(--gray-500);
+    background-color: var(--gray);
+    border-color: var(--gray);
+
+    &:hover, &:active, &:focus, &:not(:disabled):not(.disabled):active {
+        color: darken($gray, 40%);
+        background-color: darken($gray, 0%);
+        border-color: darken($gray, 3%);
+    }
+}
