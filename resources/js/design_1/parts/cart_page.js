@@ -1,10 +1,23 @@
 (function () {
     "use strict";
 
+    const updatePayButtonState = function () {
+        const $payButton = $('.js-cart-payment-btn');
+
+        if (!$payButton.length) {
+            return;
+        }
+
+        const hasSelectedGateway = $('input[name="gateway"]:checked').length > 0;
+        $payButton.prop('disabled', !hasSelectedGateway);
+    };
+
     $('document').ready(function () {
         if (typeof hasErrors !== "undefined" && hasErrors === 'true') {
             showToast('error', oopsLang, hasErrorsHintLang);
         }
+
+        updatePayButtonState();
     })
 
     $('body').on('click', '.js-cart-checkout', function (e) {
@@ -31,7 +44,6 @@
             showToast("success", pleaseWaitLang, transferringToLang)
 
             const channelName = $selectedChannel.attr('data-class');
-            const gatewayId = $selectedChannel.attr('id');
 
             if (channelName === 'Razorpay') {
                 $('.razorpay-payment-button').trigger('click');
@@ -40,21 +52,24 @@
             }
         } else {
             showToast('error', '', selectPaymentGatewayLang)
+            updatePayButtonState();
         }
     });
 
-    // Update button label when user selects offline gateway without clicking pay
+    // Update button label and state when user selects a gateway
     $('body').on('change', 'input[name="gateway"]', function () {
         const id = $(this).attr('id');
         const $btnTextEl = $('.js-pay-now-text');
+
         if ($btnTextEl && $btnTextEl.length) {
             if (id === 'gateway_offline') {
                 $btnTextEl.text('Submit offline payment');
             } else {
-                $btnTextEl.text($('#gateway_credit').length ? $('#gateway_credit').closest('label').find('h6').text() ? 'Pay Now!' : 'Pay Now!' : 'Pay Now!');
                 $btnTextEl.text('Pay Now!');
             }
         }
+
+        updatePayButtonState();
     });
 
 
@@ -82,6 +97,8 @@
 
                     $this.addClass('d-none');
                     $parent.find('.js-remove-coupon-btn').removeClass('d-none')
+
+                    updatePayButtonState();
                 }
 
             }).fail(err => {
