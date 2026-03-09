@@ -70,6 +70,112 @@
     <script src="{{ getDesign1ScriptPath("learning_page_noticeboards") }}"></script>
     <script src="{{ getDesign1ScriptPath("learning_page") }}"></script>
     <script>
+        (function ($) {
+            "use strict";
+
+            let isNavigatingToNextItem = false;
+
+            function parseRequestData(data) {
+                if (!data) return {};
+
+                if (typeof data === "object") return data;
+
+                const parsed = {};
+                try {
+                    data.split("&").forEach(function (pair) {
+                        const parts = pair.split("=");
+                        const key = decodeURIComponent(parts[0] || "");
+                        const value = decodeURIComponent((parts[1] || "").replace(/\+/g, " "));
+
+                        if (key) {
+                            parsed[key] = value;
+                        }
+                    });
+                } catch (e) {
+                }
+
+                return parsed;
+            }
+
+            function getNextAvailableItem() {
+                const $active = $(".js-content-tab-item.active").first();
+
+                if (!$active.length) {
+                    return null;
+                }
+
+                const $items = $(".js-content-tab-item").not(".js-sequence-content-error-modal");
+                const activeIndex = $items.index($active);
+
+                if (activeIndex < 0) {
+                    return null;
+                }
+
+                for (let i = activeIndex + 1; i < $items.length; i++) {
+                    const $candidate = $($items[i]);
+
+                    if ($candidate.length) {
+                        return $candidate;
+                    }
+                }
+
+                return null;
+            }
+
+            function redirectToNextItem() {
+                if (isNavigatingToNextItem) return;
+
+                const $next = getNextAvailableItem();
+                if (!$next || !$next.length) return;
+
+                const nextType = $next.attr("data-type");
+                const nextItemId = $next.attr("data-id");
+
+                if (!nextType || !nextItemId) return;
+
+                isNavigatingToNextItem = true;
+
+                const nextUrl = `${courseLearningUrl}?type=${encodeURIComponent(nextType)}&item=${encodeURIComponent(nextItemId)}`;
+                window.location.assign(nextUrl);
+            }
+
+            // Manual check -> save success -> move to next content item
+            $(document).ajaxSuccess(function (event, xhr, settings) {
+                if (isNavigatingToNextItem || !settings || !settings.url) {
+                    return;
+                }
+
+                const isLearningStatusRequest =
+                    settings.url.indexOf("/learningStatus") !== -1 &&
+                    settings.url.indexOf("/track-time") === -1;
+
+                if (!isLearningStatusRequest) {
+                    return;
+                }
+
+                const requestData = parseRequestData(settings.data);
+                const checked = requestData.status === true || requestData.status === "true" || requestData.status === "1";
+
+                if (!checked) {
+                    return;
+                }
+
+                setTimeout(redirectToNextItem, 250);
+            });
+
+            // Video ended (HTML5 source) -> auto check current item
+            $("body").on("ended", "video.plyr-io-video", function () {
+                const $toggle = $("#mainContent").find(".js-passed-item-toggle").first();
+
+                if (!$toggle.length || $toggle.prop("checked") || $toggle.prop("disabled")) {
+                    return;
+                }
+
+                $toggle.prop("checked", true).trigger("change");
+            });
+        })(jQuery);
+    </script>
+    <script>
         // Watermark behavior from settings
         (function(){
             try {
