@@ -44,6 +44,12 @@
                                 @if(!empty($paymentChannels))
                                     @foreach($paymentChannels as $paymentChannel)
                                         @if(!$isMultiCurrency or (!empty($paymentChannel->currencies) and in_array($userCurrency, $paymentChannel->currencies)))
+                                            @php
+                                                $isAfpGateway = \Illuminate\Support\Str::contains(
+                                                    strtolower(($paymentChannel->class_name ?? '') . ' ' . ($paymentChannel->title ?? '')),
+                                                    'afp'
+                                                );
+                                            @endphp
                                             <div class="payment-channel-card position-relative">
                                                 <input
                                                     type="radio"
@@ -55,9 +61,11 @@
                                                     totalprice="{{ convertPriceToUserCurrency($order->total_amount, getUserCurrencyItem(Auth::user())) }}"
                                                     orderid="{{ $order->id }}"
                                                     currency="{{ currency() }}"
-                                                    onclick="togglePaymentChannel(this)"
-                                                    url="{{ route('afpay-payment-link') }}"
-                                                    token="{{ csrf_token() }}"
+                                                    @if($isAfpGateway)
+                                                        onclick="togglePaymentChannel(this)"
+                                                        url="{{ route('afpay-payment-link') }}"
+                                                        token="{{ csrf_token() }}"
+                                                    @endif
                                                 >
                                                 <label class="position-relative w-100 d-block cursor-pointer" for="gateway_{{ $paymentChannel->id }}">
                                                     <div class="gateway-mask"></div>
